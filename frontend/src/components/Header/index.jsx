@@ -1,15 +1,40 @@
+import { useState } from "react";
 import SHeader from "./style";
 
 export default function Header() {
+  const [showLinks, setShowLinks] = useState(false);
+  const handleShowLinks = () => {
+    setShowLinks(!showLinks);
+  };
   return (
     <SHeader>
-      <h1>Cinépédia</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique
-        repellat mollitia vero sit quod, totam, repudiandae officiis cumque
-        adipisci minus error delectus aperiam labore sint tenetur quam deserunt
-        obcaecati architecto.
-      </p>
+      <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
+        <div className="searchbar">Searchbar</div>
+        <img
+          className="navbar_logo"
+          src="src/assets/cinerama.png"
+          alt="logo cinerama"
+        />
+        <ul className="navbar_links">
+          <li className="navbar_item slideInDown-1 ">
+            <a href="/" className="navbar_link">
+              Sortie de la semaine
+            </a>
+          </li>
+          <li className="navbar_item slideInDown-2">
+            <a href="/" className="navbar_link">
+              Suggérator / filtres
+            </a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          className="navbar_burger"
+          onClick={handleShowLinks}
+        >
+          <span className="burger-bar" />
+        </button>
+      </nav>
     </SHeader>
   );
 }
