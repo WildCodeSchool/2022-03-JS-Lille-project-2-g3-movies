@@ -1,9 +1,9 @@
-import TypeCarroussel from "./components/TypeCarroussel";
-import Suggerator from "./components/Suggerator";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CarrousselNews from "./components/CarrousselNews";
-
+import Suggestion from "./pages/Suggestion";
 import SGlobal from "./style";
 
 function App() {
@@ -12,8 +12,10 @@ function App() {
       <CarrousselNews />
       <div className="rollover">
         <Header />
-        <TypeCarroussel />
-        <Suggerator />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/suggestion" element={<Suggestion />} />
+        </Routes>
         <Footer />
       </div>
     </SGlobal>

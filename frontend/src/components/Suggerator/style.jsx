@@ -27,4 +27,7 @@ export default styled.section`
     padding: 0.5em 1.75em 0.5em;
     margin-top: 1rem;
   }
+  a {
+    text-decoration: none;
+  }
 `;

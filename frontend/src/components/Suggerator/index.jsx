@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SSuggerator from "./style";
 
 export default function Suggerator() {
@@ -5,7 +6,9 @@ export default function Suggerator() {
     <SSuggerator>
       <h2>Suggest me some movies</h2>
       <p>You need ideas ? </p>
-      <p className="button"> Suggerator</p>
+      <Link to="/suggestion">
+        <p className="button"> Suggerator</p>
+      </Link>
     </SSuggerator>
   );
 }
