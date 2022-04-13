@@ -40,10 +40,12 @@ export default styled.div`
   box-sizing: border-box;
   min-height: 100vh;
 
-  header,
-  footer,
-  section {
-    padding: 2rem;
+  & > .rollover {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    /* this class is created to place in absolute position all the components
+in order to make background image from CarrousselNews in top left. Width must be declared again */
   }
 
   .test {
@@ -63,13 +65,7 @@ export default styled.div`
     color: var(--font-color-title2);
     font-size: var(--font-size-h2);
   }
-  section {
-    padding: var(--section-spacing);
-    max-width: 800px;
-    margin: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+
   p,
   li {
     font-size: var(--font-size-general);
