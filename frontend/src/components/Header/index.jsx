@@ -1,14 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SHeader from "./style";
 
 export default function Header() {
   const [showLinks, setShowLinks] = useState(false);
+  const [y, setY] = useState(window.scrollY);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setY(window.scrollY);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", () => {
+        setY(window.scrollY);
+      });
+    };
+  }, []);
+
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
+
   return (
     <SHeader>
-      <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
+      <nav
+        className={`navbar ${showLinks ? "show-nav" : "hide-nav"} ${
+          y === 0 ? "navbar" : "navbarsolid"
+        }`}
+      >
         <div className="searchbar">Searchbar</div>
         <img
           className="navbar_logo"

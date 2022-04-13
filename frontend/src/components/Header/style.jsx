@@ -23,6 +23,10 @@ export default styled.header`
     width: 100vw;
     min-height: 75px;
   }
+  .navbarsolid {
+    background-color: green;
+    color: yellow;
+  }
   .navbar_logo {
     justify-self: center;
   }
