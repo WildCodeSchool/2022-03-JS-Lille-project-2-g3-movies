@@ -10,11 +10,9 @@ background-image: url("https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces
 background-size: cover;
 background-repeat: no-repeat;
 background-position: top center;
-
 filter: grayscale(19%) brightness(96%) saturate(149%) opacity(86%);
 -webkit-filter: grayscale(19%) brightness(96%) saturate(149%) opacity(86%);
 -moz-filter: grayscale(19%) brightness(96%) saturate(149%) opacity(86%);
-
 box-shadow: 10px 10px 94px 0px var(--color-grey);
 -webkit-box-shadow: 10px 10px 94px 0px var(--color-grey);
 -moz-box-shadow: 10px 10px 94px 0px var(--color-grey);
