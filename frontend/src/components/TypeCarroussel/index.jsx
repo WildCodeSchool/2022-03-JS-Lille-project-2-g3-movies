@@ -3,7 +3,8 @@ import STypeCarroussel from "./style";
 export default function TypeCarroussel() {
   return (
     <STypeCarroussel>
-      <p>Ici le carroussel par types de films</p>
+      <h2>By theme</h2>
+      <div>Ici le carroussel par types de films</div>
     </STypeCarroussel>
   );
 }
