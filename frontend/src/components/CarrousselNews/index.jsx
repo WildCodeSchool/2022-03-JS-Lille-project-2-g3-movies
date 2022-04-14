@@ -15,7 +15,6 @@ function CarrousselNews() {
         setMoviesData(res.data.results);
       });
   }, []);
-
   return (
     moviesData.length > 0 && ( // fixed autoplay malfunction
       <Carousel
@@ -38,5 +37,4 @@ function CarrousselNews() {
     )
   );
 }
-
 export default CarrousselNews;
