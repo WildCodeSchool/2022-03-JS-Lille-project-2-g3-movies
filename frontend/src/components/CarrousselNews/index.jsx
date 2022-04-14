@@ -11,7 +11,7 @@ function CarrousselNews() {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/upcoming?api_key=923a42c07dc9afdc9a05b46fb2fd558b`
+        `https://api.themoviedb.org/3/movie/upcoming?api_key=923a42c07dc9afdc9a05b46fb2fd558b&language=en-US`
       )
       .then((res) => {
         setMoviesData(res.data.results);
@@ -19,14 +19,25 @@ function CarrousselNews() {
   }, []);
 
   return (
-    <Carousel>
-      {moviesData.map((movie) => (
-        <img
-          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-          alt=""
-        />
-      ))}
-    </Carousel>
+    moviesData.length > 0 && ( // fixed autoplay malfunction
+      <Carousel
+        autoPlay
+        interval={3000}
+        transitionTime={1000}
+        showThumbs={false}
+        swipable
+        infiniteLoop
+        showStatus={false}
+      >
+        {moviesData.map((movie) => (
+          <img
+            key={movie.id}
+            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            alt=""
+          />
+        ))}
+      </Carousel>
+    )
   );
 }
 
