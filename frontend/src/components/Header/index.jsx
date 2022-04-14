@@ -24,34 +24,34 @@ export default function Header() {
   return (
     <SHeader>
       <nav
-        className={`navbar ${showLinks ? "show-nav" : "hide-nav"} ${
-          y === 0 ? "navbar" : "navbarsolid"
+        className={`navBar ${showLinks ? "showNav" : "hideNav"} ${
+          y === 0 ? "navBar" : "navBarSolid"
         }`}
       >
-        <div className="searchbar">Searchbar</div>
+        <div className="searchBar">Searchbar</div>
         <img
-          className="navbar_logo"
+          className="navBarLogo"
           src="src/assets/cinerama.png"
           alt="logo cinerama"
         />
-        <ul className="navbar_links">
-          <li className="navbar_item slideInDown-1 ">
-            <a href="/" className="navbar_link">
+        <ul className="navBarLinks">
+          <li className="navBarItem slideInDown1">
+            <a href="/" className="navBarLink">
               Weekly upcomings
             </a>
           </li>
-          <li className="navbar_item slideInDown-2">
-            <a href="/" className="navbar_link">
+          <li className="navBarItem slideInDown2">
+            <a href="/" className="navBarLink">
               Suggerator / filters
             </a>
           </li>
         </ul>
         <button
           type="button"
-          className="navbar_burger"
+          className="navBarBurger"
           onClick={handleShowLinks}
         >
-          <span className="burger-bar" />
+          <span className="burgerBar" />
         </button>
       </nav>
     </SHeader>
