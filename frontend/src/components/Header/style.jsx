@@ -36,6 +36,7 @@ export default styled.header`
     background: transparent;
     border: none;
     color: inherit;
+    display: block;
   }
   .navBarLinks {
     display: flex;
@@ -72,9 +73,6 @@ export default styled.header`
   }
   .navBarItem:last-child::after {
     display: none;
-  }
-  .navBarBurger {
-    display: block;
   }
   .navBarBurger:hover {
     cursor: pointer;
