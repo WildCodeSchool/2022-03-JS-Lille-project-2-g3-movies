@@ -1,6 +1,4 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import { Carousel } from "react-responsive-carousel";
-// import Slide from "../Slide";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Carousel } from "react-responsive-carousel";
