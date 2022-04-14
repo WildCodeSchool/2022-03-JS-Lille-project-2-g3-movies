@@ -4,7 +4,7 @@ export default styled.section`
   height: 40vh;
   max-width: 800px;
   margin: auto;
-  margin-top: 40vh;
+  margin-top: 60vh;
   padding-top: 3vh;
   padding-left: var(--section-spacing);
 
