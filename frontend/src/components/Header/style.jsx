@@ -11,7 +11,7 @@ export default styled.header`
   }
   .navBar {
     height: 20vh;
-    background-color: black;
+    background-color: transparent;
     color: #fff;
     display: flex;
     flex-wrap: wrap;
@@ -24,7 +24,7 @@ export default styled.header`
     min-height: 75px;
   }
   .navBarSolid {
-    background-color: green;
+    background-color: rgba(0, 0, 0, 0.5);
     color: yellow;
   }
   .navBarLogo {
@@ -52,6 +52,8 @@ export default styled.header`
     visibility: hidden;
     background-color: black;
     transition: all 0.8s ease-out;
+  }
+  .showNav .navBarLinks {
     left: 0;
     width: 30vw;
     visibility: visible;
@@ -68,7 +70,6 @@ export default styled.header`
     display: block;
     padding: 1.5rem;
     font-size: 3vw;
-    padding: 0 0.3rem;
     color: inherit;
   }
   .navBarItem:last-child::after {
@@ -118,10 +119,10 @@ export default styled.header`
   .showNav .navBarItem {
     transform: translateY(0);
   }
-  .showNav .slideInDown1 {
+  .showNav .slideInDown-1 {
     transition: all 1s ease-out;
   }
-  .showNav .slideInDown2 {
+  .showNav .slideInDown-2 {
     transition: all 1.1s ease-out;
   }
   @media screen and (max-width: 767px) {
