@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CarrousselNews from "./components/CarrousselNews";
@@ -9,9 +10,9 @@ import SGlobal from "./style";
 function App() {
   return (
     <SGlobal>
-      <CarrousselNews />
       <div className="rollover">
         <Header />
+          <CarrousselNews />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/suggestion" element={<Suggestion />} />
@@ -21,5 +22,4 @@ function App() {
     </SGlobal>
   );
 }
-
 export default App;
