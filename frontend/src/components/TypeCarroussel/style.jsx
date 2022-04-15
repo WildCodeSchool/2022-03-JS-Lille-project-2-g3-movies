@@ -4,8 +4,7 @@ export default styled.section`
   height: 40vh;
   max-width: 800px;
   margin: auto;
-  margin-top: 60vh;
-  padding-top: 3vh;
+  padding-top: 5vh;
   padding-left: var(--section-spacing);
 
   h2 {
@@ -17,5 +16,13 @@ export default styled.section`
     border-radius: 5vw;
     height: 30vh;
     padding: 1rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-left: 0;
+
+    div {
+      border-radius: initial;
+    }
   }
 `;
