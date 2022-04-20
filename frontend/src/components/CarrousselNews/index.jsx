@@ -27,7 +27,6 @@ function CarrousselNews() {
           swipable
           infiniteLoop
           showStatus={false}
-          className="toto"
         >
           {moviesData.map((movie) => (
             <img

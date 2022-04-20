@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export default styled.header`
+  position: absolute;
+  top: 0;
   ul {
     list-style: none;
     padding: 0;
@@ -23,7 +25,6 @@ export default styled.header`
     width: 100vw;
     min-height: 75px;
     transition: 0.5s;
-    z-index: 9999;
   }
   .navBarSolid {
     background-color: rgb(8, 7, 8, 0.8);
@@ -56,7 +57,7 @@ export default styled.header`
   }
   .showNav .navBarLinks {
     left: 0;
-    width: 30vw;
+    width: 20vw;
     visibility: visible;
   }
   .navBarItem::after {
@@ -70,7 +71,7 @@ export default styled.header`
   .navBarLink {
     display: block;
     padding: 1.5rem;
-    font-size: 3vw;
+    font-size: 1rem;
     color: inherit;
   }
   .navBarItem:last-child::after {
