@@ -12,7 +12,7 @@ function App() {
     <SGlobal>
       <div className="rollover">
         <Header />
-          <CarrousselNews />
+        <CarrousselNews />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/suggestion" element={<Suggestion />} />
