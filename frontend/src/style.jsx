@@ -30,7 +30,6 @@ export default styled.div`
   --font-size-h3: 1.25rem;
 
   /*Paddings et margins */
-  --section-spacing: 2rem;
 
   /*Déclaration de l'arriere plan general*/
 
