@@ -14,7 +14,7 @@ export default styled.section`
 
   div {
     border-radius: 5vw;
-    height: 30vh;
+    height: 60vh;
     padding: 1rem;
   }
 `;

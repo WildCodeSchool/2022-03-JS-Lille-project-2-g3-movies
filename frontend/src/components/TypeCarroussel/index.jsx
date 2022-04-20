@@ -1,5 +1,5 @@
 import { Carousel } from "react-responsive-carousel";
-import imageTest from "../../assets/action.png";
+import { action, animation, comedy, crime } from "@assets/data";
 import STypeCarroussel from "./style";
 
 export default function TypeCarroussel() {
@@ -15,7 +15,10 @@ export default function TypeCarroussel() {
         infiniteLoop
         showStatus={false}
       >
-        <img src={imageTest} alt="" />
+        <img src={action.picture} alt={action.alt} />
+        <img src={animation.picture} alt={animation.alt} />
+        <img src={comedy.picture} alt={comedy.alt} />
+        <img src={crime.picture} alt={crime.alt} />
       </Carousel>
       )
     </STypeCarroussel>
