@@ -13,7 +13,6 @@ export default styled.section`
   }
 
   div {
-    border: 1px solid #646881;
     border-radius: 5vw;
     height: 30vh;
     padding: 1rem;

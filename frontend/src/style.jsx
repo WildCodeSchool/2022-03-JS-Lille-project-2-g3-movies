@@ -46,7 +46,7 @@ export default styled.div`
   & > .rollover {
     position: absolute;
     top: 0;
-    width: 97vw;
+    width: 95vw;
     /* this class is created to place in absolute position all the components
 in order to make background image from CarrousselNews in top left. Width must be declared again */
   }
