@@ -10,7 +10,6 @@ import SGlobal from "./style";
 function App() {
   return (
     <SGlobal>
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/suggestion" element={<Suggestion />} />
@@ -18,7 +17,6 @@ function App() {
       </Routes>
       <Header />
       <Footer />
-
     </SGlobal>
   );
 }
