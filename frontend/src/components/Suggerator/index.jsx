@@ -7,7 +7,10 @@ export default function Suggerator() {
       <h2>Suggest me some movies</h2>
       <p>You need ideas ? </p>
       <Link to="/suggestion">
-        <p className="button"> Suggerator</p>
+        <button type="button" className="button">
+          {" "}
+          Suggerator{" "}
+        </button>
       </Link>
     </SSuggerator>
   );

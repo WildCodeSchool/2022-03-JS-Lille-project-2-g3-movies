@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export default styled.header`
+  position: absolute;
+  top: 0;
   ul {
     list-style: none;
     padding: 0;
@@ -10,7 +12,9 @@ export default styled.header`
     text-decoration: none;
   }
   .navBar {
-    height: 20vh;
+
+    height: 10vh;
+
     background-color: transparent;
     color: #fff;
     display: flex;
@@ -22,10 +26,13 @@ export default styled.header`
     position: fixed;
     width: 100vw;
     min-height: 75px;
+    transition: 0.5s;
   }
   .navBarSolid {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: yellow;
+
+    background-color: rgb(8, 7, 8, 0.8);
+    color: var(--font-primaire);
+
   }
   .navBarLogo {
     justify-self: center;
@@ -48,14 +55,13 @@ export default styled.header`
     bottom: 0;
     width: 0;
     height: 100vh;
-    padding: 2rem;
     visibility: hidden;
     background-color: black;
     transition: all 0.8s ease-out;
   }
   .showNav .navBarLinks {
     left: 0;
-    width: 30vw;
+    width: 20vw;
     visibility: visible;
   }
   .navBarItem::after {
@@ -69,7 +75,8 @@ export default styled.header`
   .navBarLink {
     display: block;
     padding: 1.5rem;
-    font-size: 3vw;
+
+    font-size: 1rem;
     color: inherit;
   }
   .navBarItem:last-child::after {
@@ -87,7 +94,11 @@ export default styled.header`
     position: relative;
     border-radius: 3px;
     background-color: #fff;
+    z-index: 999;
     transition: all 0.5s ease-in-out;
+  }
+  .searchBar {
+    margin-right: 5rem;
   }
   .burgerBar::before,
   .burgerBar::after {
@@ -126,10 +137,22 @@ export default styled.header`
     transition: all 1.1s ease-out;
   }
   @media screen and (max-width: 767px) {
+    .searchBar {
+      display: none;
+    }
+    .navBar {
+      padding: 0;
+      position: initial;
+      background-color: black;
+    }
+    .navBarLogo {
+      padding-right: 1.3rem;
+    }
     .showNav .navBarLinks {
       left: 0;
       width: 100vw;
       visibility: visible;
+      z-index: 999;
     }
     .navBarLink {
       display: block;

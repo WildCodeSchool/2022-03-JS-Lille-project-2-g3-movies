@@ -4,8 +4,7 @@ export default styled.section`
   width: 80vw;
 
   margin: auto;
-  margin-top: 60vh;
-  padding-top: 3vh;
+  padding-top: 5vh;
   padding-left: var(--section-spacing);
   h2 {
     text-align: center;
@@ -38,5 +37,13 @@ export default styled.section`
     display: inline-block;
     width: 100%;
     height: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-left: 0;
+
+    div {
+      border-radius: initial;
+    }
   }
 `;

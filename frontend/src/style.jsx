@@ -41,15 +41,8 @@ export default styled.div`
   line-height: var(--line-height-general);
   color: var(--color-font-general);
   box-sizing: border-box;
-  min-height: 140vh; /*hauteur du viewport + du carroussel de nouveauté"*/
 
-  & > .rollover {
-    position: absolute;
-    top: 0;
-    width: 95vw;
-    /* this class is created to place in absolute position all the components
-in order to make background image from CarrousselNews in top left. Width must be declared again */
-  }
+
 
   .test {
     border: 3px dotted red;

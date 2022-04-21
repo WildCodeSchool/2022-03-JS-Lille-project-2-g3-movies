@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export default styled.section`
   height: 25vh;
-  max-width: 800px;
-  margin: auto;
   padding-left: var(--section-spacing);
   margin-top: 5vh;
   padding-top: 3vh;
@@ -11,7 +9,8 @@ export default styled.section`
   h2 {
     text-align: center;
   }
-  p {
+  p,
+  button {
     padding-left: 1rem;
     margin: auto;
     text-align: center;
@@ -26,8 +25,16 @@ export default styled.section`
     width: fit-content;
     padding: 0.5em 1.75em 0.5em;
     margin-top: 1rem;
+    display: flex;
   }
   a {
     text-decoration: none;
+  }
+  @media screen and (max-width: 767px) {
+    padding-left: 0;
+
+    div {
+      border-radius: initial;
+    }
   }
 `;
