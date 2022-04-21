@@ -1,21 +1,14 @@
 import styled from "styled-components";
 
 export default styled.section`
-  height: 40vh;
-  max-width: 800px;
+  width: 80vw;
+
   margin: auto;
   margin-top: 60vh;
   padding-top: 3vh;
   padding-left: var(--section-spacing);
-
   h2 {
     text-align: center;
-  }
-
-  div {
-    border-radius: 5vw;
-    height: 30vh;
-    padding: 1rem;
   }
 
   .swiper {
@@ -34,19 +27,16 @@ export default styled.section`
     -webkit-align-items: center;
     align-items: center;
   }
-
   .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    min-width: 250px;
   }
-
-  .swiper-pagination-bullet {
-    border: 5px solid red;
-  }
-
   a {
-    border: 2px solid yellowgreen;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
   }
 `;
