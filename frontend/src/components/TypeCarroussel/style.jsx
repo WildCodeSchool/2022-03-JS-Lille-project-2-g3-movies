@@ -2,14 +2,12 @@ import styled from "styled-components";
 
 export default styled.section`
   width: 80vw;
-
   margin: auto;
   padding-top: 5vh;
   padding-left: var(--section-spacing);
   h2 {
     text-align: center;
   }
-
   .swiper {
     width: 100%;
     height: 100%;
@@ -38,10 +36,8 @@ export default styled.section`
     width: 100%;
     height: 100%;
   }
-
   @media screen and (max-width: 767px) {
     padding-left: 0;
-
     div {
       border-radius: initial;
     }
