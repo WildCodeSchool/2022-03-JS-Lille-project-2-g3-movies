@@ -12,9 +12,7 @@ export default styled.header`
     text-decoration: none;
   }
   .navBar {
-
     height: 10vh;
-
     background-color: transparent;
     color: #fff;
     display: flex;
@@ -29,10 +27,8 @@ export default styled.header`
     transition: 0.5s;
   }
   .navBarSolid {
-
     background-color: rgb(8, 7, 8, 0.8);
     color: var(--font-primaire);
-
   }
   .navBarLogo {
     justify-self: center;
@@ -75,7 +71,6 @@ export default styled.header`
   .navBarLink {
     display: block;
     padding: 1.5rem;
-
     font-size: 1rem;
     color: inherit;
   }
