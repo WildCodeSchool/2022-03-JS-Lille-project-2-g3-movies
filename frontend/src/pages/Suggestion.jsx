@@ -1,3 +1,1 @@
-export default function Suggestion() {
-  return <>Hello</>;
-}
+export default function Suggestion() {}

@@ -42,6 +42,8 @@ export default styled.div`
   color: var(--color-font-general);
   box-sizing: border-box;
 
+
+
   .test {
     border: 3px dotted red;
   }
