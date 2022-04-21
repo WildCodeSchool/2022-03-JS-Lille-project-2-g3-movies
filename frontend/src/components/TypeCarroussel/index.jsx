@@ -1,23 +1,42 @@
-import { Carousel } from "react-responsive-carousel";
-import imageTest from "../../assets/action.png";
+import { action, animation, comedy, crime } from "@assets/data";
+import { Link } from "react-router-dom";
+/* eslint-disable import/no-unresolved */
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+/* eslint-enable import/no-unresolved */
+import { Pagination, Navigation } from "swiper";
 import STypeCarroussel from "./style";
 
 export default function TypeCarroussel() {
   return (
     <STypeCarroussel>
-      <h2>By category</h2>
-      <Carousel
-        autoPlay
-        interval={3000}
-        transitionTime={1000}
-        showThumbs={false}
-        swipable
-        infiniteLoop
-        showStatus={false}
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={10}
+        pagination={{
+          clickable: true,
+        }}
+        navigation
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
       >
-        <img src={imageTest} alt="" />
-      </Carousel>
-      )
+        <SwiperSlide>
+          <Link to={`/results/${action.key}`}>
+            <img src={action.picture} alt={action.alt} />{" "}
+          </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={animation.picture} alt={animation.alt} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={comedy.picture} alt={comedy.alt} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={crime.picture} alt={crime.alt} />
+        </SwiperSlide>
+      </Swiper>
     </STypeCarroussel>
   );
 }
