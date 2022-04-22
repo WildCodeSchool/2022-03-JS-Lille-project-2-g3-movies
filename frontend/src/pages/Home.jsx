@@ -1,4 +1,4 @@
-import CarrousselNews from "@components/CarrousselNews";
+import CarrousselNews from "../components/CarrousselNews";
 import TypeCarroussel from "../components/TypeCarroussel";
 import Suggerator from "../components/Suggerator";
 
