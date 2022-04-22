@@ -21,7 +21,7 @@ export default function QuestionSug() {
           <img src="src/assets/baby.png" alt="actual" />
         </section>
 
-        <h3>Quel est ton état ? </h3>
+        <h3>Whats your condition?</h3>
         <section className="smileyImg">
           <img src="src/assets/low-energy.png" alt="under 1h30" />
           <img src="src/assets/energy.png" alt="plus 1h30" />
