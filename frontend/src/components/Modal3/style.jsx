@@ -41,9 +41,7 @@ export default styled.div`
     position: absolute;
     top: 10px;
     right: 10px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--color-button);
+    padding: 5px 7px;
   }
   .close {
     background-color: var(--color-button);

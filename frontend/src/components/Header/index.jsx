@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import SHeader from "./style";
 
 export default function Header() {
@@ -29,11 +30,13 @@ export default function Header() {
         }`}
       >
         <div className="searchBar">Searchbar</div>
-        <img
-          className="navBarLogo"
-          src="src/assets/cinerama.png"
-          alt="logo cinerama"
-        />
+        <Link to="/">
+          <img
+            className="navBarLogo"
+            src="src/assets/cinerama.png"
+            alt="logo cinerama"
+          />
+        </Link>
         <ul className="navBarLinks">
           <li className="navBarItem slideInDown1">
             <a href="/" className="navBarLink">

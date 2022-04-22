@@ -1,13 +1,14 @@
 import SFooter from "./style";
+import Modal from "../Modal";
+import Modal2 from "../Modal2";
+import Modal3 from "../Modal3";
 
 export default function Footer() {
   return (
     <SFooter>
-      <footer>
-        <button type="button">About</button>
-        <button type="button"> Legal </button>
-        <button type="button"> The team </button>
-      </footer>
+      <Modal />
+      <Modal2 />
+      <Modal3 />
     </SFooter>
   );
 }

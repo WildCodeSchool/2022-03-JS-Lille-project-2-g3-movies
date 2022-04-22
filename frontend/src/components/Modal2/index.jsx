@@ -10,13 +10,13 @@ export default function Modal() {
   return (
     <SModal>
       <button type="button" onClick={toggleModal} className="btn-modal">
-        About
+        Legal
       </button>
       {modal && (
         <div className="modal">
           <div className="overlay" />
           <div className="modal-content">
-            <h2>Hello Modal</h2>
+            <h2>Hello Modal 2</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Doloribus, itaque fuga? Maxime corporis, nemo ipsum sunt porro
