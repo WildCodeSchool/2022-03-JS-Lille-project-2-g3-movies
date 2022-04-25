@@ -8,7 +8,7 @@ export default function Suggerator() {
       <p>You need ideas ? </p>
       <Link to="/suggestion">
         <button type="button" className="button">
-          suggestion
+          Suggest
         </button>
       </Link>
     </SSuggerator>
