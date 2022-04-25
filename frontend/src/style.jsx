@@ -44,7 +44,6 @@ export default styled.div`
   .test {
     border: 3px dotted red;
   }
-
   h1 {
     color: var(--font-color-title1);
     font-size: var(--font-size-h1);
@@ -55,12 +54,10 @@ export default styled.div`
     font-size: var(--font-size-h2);
     font-weight: var(--font-weight-title);
   }
-
   h3 {
     color: var(--font-color-title2);
     font-size: var(--font-size-h2);
   }
-
   p,
   li {
     font-size: var(--font-size-general);
