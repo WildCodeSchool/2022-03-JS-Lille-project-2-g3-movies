@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.section`
-  width: 80vw;
+  width: 70vw;
   margin: auto;
   padding-top: 15rem;
   padding-left: var(--section-spacing);
