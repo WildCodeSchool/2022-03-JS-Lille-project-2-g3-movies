@@ -40,7 +40,6 @@ export default styled.div`
   line-height: var(--line-height-general);
   color: var(--color-font-general);
   box-sizing: border-box;
-
   .test {
     border: 3px dotted red;
   }

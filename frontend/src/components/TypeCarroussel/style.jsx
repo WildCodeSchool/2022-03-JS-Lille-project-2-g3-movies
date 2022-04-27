@@ -24,6 +24,10 @@ export default styled.section`
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+    z-index: initial;
+  }
+  .swiper-wrapper {
+    z-index: initial;
   }
   .swiper-slide img {
     display: block;
@@ -31,6 +35,7 @@ export default styled.section`
     height: 100%;
     object-fit: cover;
     min-width: 250px;
+    z-index: initial;
   }
   a {
     display: inline-block;

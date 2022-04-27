@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export default styled.header`
-  position: absolute;
-  top: 0;
   ul {
     list-style: none;
     padding: 0;
@@ -13,7 +11,7 @@ export default styled.header`
   }
   .navBar {
     height: 10vh;
-    background-color: transparent;
+    background-color: rgb(8, 7, 8);
     color: #fff;
     display: flex;
     flex-wrap: wrap;
@@ -21,10 +19,9 @@ export default styled.header`
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    position: fixed;
-    width: 100vw;
     min-height: 75px;
     transition: 0.5s;
+    position: initial;
   }
   .navBarSolid {
     background-color: rgb(8, 7, 8, 0.8);
@@ -40,6 +37,7 @@ export default styled.header`
     border: none;
     color: inherit;
     display: block;
+    z-index: 1;
   }
   .navBarLinks {
     display: flex;
@@ -54,6 +52,8 @@ export default styled.header`
     visibility: hidden;
     background-color: black;
     transition: all 0.8s ease-out;
+    color: #fff;
+    z-index: 1;
   }
   .showNav .navBarLinks {
     left: 0;
@@ -89,7 +89,6 @@ export default styled.header`
     position: relative;
     border-radius: 3px;
     background-color: #fff;
-    z-index: 999;
     transition: all 0.5s ease-in-out;
   }
   .searchBar {
@@ -147,7 +146,6 @@ export default styled.header`
       left: 0;
       width: 100vw;
       visibility: visible;
-      z-index: 999;
     }
     .navBarLink {
       display: block;
