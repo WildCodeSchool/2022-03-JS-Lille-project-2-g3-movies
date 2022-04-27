@@ -1,5 +1,5 @@
 import SFooter from "./style";
-import Modal from "../Modal";
+import Modal from "../modal";
 import Modal2 from "../Modal2";
 import Modal3 from "../Modal3";
 
