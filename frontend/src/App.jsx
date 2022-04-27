@@ -16,10 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/suggestion" element={<Suggestion />} />
         <Route path="/results/:category" element={<ResultsCategory />} />
-        <Route
-          path="/suggestion/results/:URLValue"
-          element={<SuggestionResultPage />}
-        />
+        <Route path="/suggestion/results" element={<SuggestionResultPage />} />
       </Routes>
       <Footer />
     </SGlobal>
