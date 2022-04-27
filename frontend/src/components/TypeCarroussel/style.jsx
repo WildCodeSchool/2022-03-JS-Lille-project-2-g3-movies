@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default styled.section`
   width: 80vw;
   margin: auto;
-  padding-top: 15rem;
+  margin-top: 5vh;
   padding-left: var(--section-spacing);
   h2 {
     text-align: center;
@@ -33,9 +33,10 @@ export default styled.section`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    min-width: 250px;
+    /* min-width: 250px; */
     z-index: initial;
   }
+
   a {
     display: inline-block;
     width: 100%;
