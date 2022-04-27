@@ -5,7 +5,6 @@ export default styled.section`
   margin: auto;
   padding-top: 15rem;
   padding-left: var(--section-spacing);
-
   h2 {
     text-align: center;
   }
