@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SModal from "./style";
+import SModal from "../Modal/style";
 
 export default function Modal() {
   const [modal, setModal] = useState(false);
