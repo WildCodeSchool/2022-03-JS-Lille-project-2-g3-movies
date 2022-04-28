@@ -35,7 +35,6 @@ export default styled.section`
     object-fit: cover;
     z-index: initial;
   }
-
   a {
     display: inline-block;
     width: 100%;
