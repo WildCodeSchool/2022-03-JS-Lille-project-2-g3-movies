@@ -4,7 +4,6 @@ export default styled.section`
   margin-top: 5vh;
   padding-top: 3vh;
   padding-bottom: 3vh;
-  /* border: 5px solid red; */
   justify-content: center;
   display: flex;
   flex-flow: row wrap;
