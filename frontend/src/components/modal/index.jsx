@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import SModal from "./style";
 
-export default function Modal() {
+export default function Modal({ button, children }) {
   const [modal, setModal] = useState(false);
   const toggleModal = () => {
     setModal(!modal);
@@ -10,20 +11,13 @@ export default function Modal() {
   return (
     <SModal>
       <button type="button" onClick={toggleModal} className="btn-modal">
-        About
+        {button}
       </button>
       {modal && (
         <div className="modal">
           <div className="overlay" />
           <div className="modal-content">
-            <h2>Hello Modal</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloribus, itaque fuga? Maxime corporis, nemo ipsum sunt porro
-              veritatis soluta illo, aspernatur eligendi ea doloremque velit
-              natus totam? Nihil, facere quae sint porro soluta corporis
-              veritatis tempora obcaecati? Aspernatur, officiis adipisci!
-            </p>
+            <main>{children}</main>
             <button type="button" className="close" onClick={toggleModal}>
               CLOSE
             </button>
@@ -33,3 +27,8 @@ export default function Modal() {
     </SModal>
   );
 }
+
+Modal.propTypes = {
+  button: PropTypes.bool.isRequired,
+  children: PropTypes.string.isRequired,
+};
