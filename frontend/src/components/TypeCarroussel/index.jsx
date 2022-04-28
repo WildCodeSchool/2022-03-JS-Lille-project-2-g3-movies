@@ -1,7 +1,7 @@
-import { action, animation, comedy, crime } from "@assets/data";
 import { Link } from "react-router-dom";
 /* eslint-disable import/no-unresolved */
 import { Swiper, SwiperSlide } from "swiper/react";
+import { action, animation, comedy, crime } from "../../assets/data";
 import "swiper/css";
 import "swiper/css/navigation";
 import STypeCarroussel from "./style";
