@@ -10,12 +10,12 @@ import SGlobal from "./style";
 function App() {
   return (
     <SGlobal>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/suggestion" element={<Suggestion />} />
         <Route path="/results/:category" element={<ResultsCategory />} />
       </Routes>
-      <Header />
       <Footer />
     </SGlobal>
   );
