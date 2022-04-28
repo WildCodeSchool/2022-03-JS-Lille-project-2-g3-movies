@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export default styled.section`
-  height: 25vh;
-  max-width: 800px;
-  margin: auto;
-  padding-left: var(--section-spacing);
   margin-top: 5vh;
   padding-top: 3vh;
-  border: 5px solid red;
+  padding-bottom: 3vh;
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 5vh;
 
   h2 {
     text-align: center;
