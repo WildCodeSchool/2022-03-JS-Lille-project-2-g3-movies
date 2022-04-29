@@ -39,14 +39,14 @@ export default function Header() {
         </Link>
         <ul className="navBarLinks">
           <li className="navBarItem slideInDown1">
-            <a href="/" className="navBarLink">
+            <Link to="/weeklyupcoming" className="navBarLink">
               Weekly upcomings
-            </a>
+            </Link>
           </li>
           <li className="navBarItem slideInDown2">
-            <a href="/" className="navBarLink">
-              Suggerator / filters
-            </a>
+            <Link to="/suggestion" className="navBarLink">
+              Suggest me some movies
+            </Link>
           </li>
         </ul>
         <button
