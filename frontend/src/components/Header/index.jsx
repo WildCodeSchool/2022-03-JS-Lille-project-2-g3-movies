@@ -30,7 +30,6 @@ export default function Header() {
         }`}
       >
         <div className="searchBar">Searchbar</div>
-
         <Link to="/">
           <img
             className="navBarLogo"
