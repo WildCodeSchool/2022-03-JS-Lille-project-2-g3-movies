@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import ResultsCategory from "@components/ResultsCategory";
-import SuggestionResultPage from "@pages/SuggestionResultPage";
+import SugResult from "@components/SugResult";
 import Home from "./pages/Home";
 
 import Header from "./components/Header";
@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/suggestion" element={<Suggestion />} />
         <Route path="/results/:category" element={<ResultsCategory />} />
-        <Route path="/suggestion/results" element={<SuggestionResultPage />} />
+        <Route path="/suggestion/results" element={<SugResult />} />
       </Routes>
       <Footer />
     </SGlobal>
