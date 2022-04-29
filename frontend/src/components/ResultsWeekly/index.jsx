@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import SResultsCategory from "./style";
+import SResultsWeekly from "./style";
 import Card from "../Card";
 
-export default function ResultsCategory() {
+export default function ResultsWeekly() {
   const [moviesData, setMoviesData] = useState([]);
 
   useEffect(() => {
@@ -21,11 +21,11 @@ export default function ResultsCategory() {
   }, []);
   return (
     moviesData.length > 0 && ( // fixed autoplay malfunction
-      <SResultsCategory>
+      <SResultsWeekly>
         {moviesData.map((movie) => (
           <Card key={movie.id} data={movie} />
         ))}
-      </SResultsCategory>
+      </SResultsWeekly>
     )
   );
 }
