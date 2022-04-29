@@ -21,7 +21,7 @@ function CarrousselNews() {
       <SCarousel>
         <Carousel
           autoPlay
-          interval={3000}
+          interval={2800}
           transitionTime={1000}
           showThumbs={false}
           swipable
