@@ -39,4 +39,7 @@ export default styled.div`
   div {
     border-radius: initial;
   }
+  .bordersolid {
+    border: 1px solid red;
+  }
 `;

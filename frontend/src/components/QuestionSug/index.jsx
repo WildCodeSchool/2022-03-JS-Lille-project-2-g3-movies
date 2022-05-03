@@ -1,67 +1,53 @@
-import { useState } from "react";
+import QuestSugComp from "@components/QuestSugComp";
 import SQuestionSug from "./style";
 import smileys from "../../assets/datasuggest";
 
-export default function QuestionSug() {
-  const [choiceLinks, setChoiceLinks] = useState(false);
-  const handleChoiceLinks = () => {
-    setChoiceLinks(!choiceLinks);
-  };
+function QuestionSug() {
   return (
     <SQuestionSug>
       <div>
-        <div className={`Img ${choiceLinks ? "borderSolid" : ""} `}>
-          <h1> Suggestion </h1>
-          <h2> Which film do you recommend me ?</h2>
-          <h3> Whats your vibes ?</h3>
-          <section className="smileyImg">
-            {smileys
-              .filter((smiley) => smiley.type.includes("vibe"))
-              .map((smiley) => (
-                <button
-                  type="button"
-                  className="Img"
-                  onClick={handleChoiceLinks}
-                >
-                  <img src={smiley.picture} alt={smiley.alt} />
-                </button>
-              ))}
-          </section>
-          <h3> What is your movie style ?</h3>
-          <section className="smileyImg">
-            {smileys
-              .filter((smiley) => smiley.type.includes("dateRelease"))
-              .map((smiley) => (
-                <button
-                  type="button"
-                  className="Img"
-                  onClick={handleChoiceLinks}
-                >
-                  <img src={smiley.picture} alt={smiley.alt} />
-                </button>
-              ))}
-          </section>
-          <h3> What is your condition ?</h3>
-          <section className="smileyImg">
-            {smileys
-              .filter((smiley) => smiley.type.includes("runtime"))
-              .map((smiley) => (
-                <button
-                  type="button"
-                  className="Img"
-                  onClick={handleChoiceLinks}
-                >
-                  <img src={smiley.picture} alt={smiley.alt} />
-                </button>
-              ))}
-          </section>
-        </div>
-        <div className="buttonResults">
-          <button type="button" className="button">
-            Show your result
-          </button>
-        </div>
+        <h1> Suggestion </h1>
+        <h2> Which film do you recommend me ?</h2>
+        <h3> Whats your vibe ?</h3>
+        <section className="smileyImg">
+          {smileys
+            .filter((smiley) => smiley.type.includes("vibe"))
+            .map((smiley) => (
+              <QuestSugComp
+                key={smiley.key}
+                picture={smiley.picture}
+                alt={smiley.alt}
+              />
+            ))}
+        </section>
+        <h3> Whats your favorite period ?</h3>
+        <section className="smileyImg">
+          {smileys
+            .filter((smiley) => smiley.type.includes("dateRelease"))
+            .map((smiley) => (
+              <QuestSugComp picture={smiley.picture} alt={smiley.alt} />
+            ))}
+        </section>
+        <h3> Whats your energy ?</h3>
+        <section className="smileyImg">
+          {smileys
+            .filter((smiley) => smiley.type.includes("runtime"))
+            .map((smiley) => (
+              <QuestSugComp
+                picture={smiley.picture}
+                alt={smiley.alt}
+                query={smiley.query}
+              />
+            ))}
+        </section>
+      </div>
+      <div className="buttonResults">
+        <button type="button" className="button">
+          Show your result
+        </button>
       </div>
     </SQuestionSug>
   );
 }
+
+export default QuestionSug;
