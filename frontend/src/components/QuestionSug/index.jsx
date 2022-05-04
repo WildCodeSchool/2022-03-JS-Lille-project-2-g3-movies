@@ -17,8 +17,6 @@ export default function QuestionSug() {
     setFormData({ ...formData, [key]: value });
   };
 
-  const sendQuery = () => {};
-
   return (
     <SQuestionSug>
       <div>
@@ -78,7 +76,7 @@ export default function QuestionSug() {
       </div>
       <div className="buttonResults">
         <Link to={`/suggestion/results?${querySent}`}>
-          <button type="button" className="button" onClick={sendQuery}>
+          <button type="button" className="button">
             Show your result
           </button>
         </Link>
