@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import ResultsWeekly from "@components/ResultsWeekly";
+import ResultsWeekly from "./components/ResultsWeekly";
 import SearchPage from "./pages/SearchPage";
 import ResultsCategory from "./components/ResultsCategory";
 import Home from "./pages/Home";
