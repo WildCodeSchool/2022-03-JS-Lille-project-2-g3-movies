@@ -29,7 +29,7 @@ export default function Header() {
           y === 0 ? "navBar" : "navBarSolid"
         }`}
       >
-        <div className="searchBar">Searchbar</div>
+        <p>Searchbar</p>
         <Link to="/">
           <img
             className="navBarLogo"
