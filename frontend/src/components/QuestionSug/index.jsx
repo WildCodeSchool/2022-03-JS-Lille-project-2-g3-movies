@@ -4,8 +4,11 @@ import smileys from "../../assets/datasuggest";
 
 export default function QuestionSug() {
   const [choiceLinks, setChoiceLinks] = useState(false);
-  const handleChoiceLinks = () => {
+  const handleChoiceLinks = (evt) => {
     setChoiceLinks(!choiceLinks);
+    if (choiceLinks) {
+      evt.target.classList.add("selected");
+    }
   };
   return (
     <SQuestionSug>
@@ -17,11 +20,7 @@ export default function QuestionSug() {
           {smileys
             .filter((smiley) => smiley.type.includes("vibe"))
             .map((smiley) => (
-              <button
-                type="button"
-                onClick={handleChoiceLinks}
-                className={`Img ${choiceLinks ? "selected" : ""} `}
-              >
+              <button type="button" onClick={handleChoiceLinks} className="Img">
                 <img src={smiley.picture} alt={smiley.alt} />
               </button>
             ))}
@@ -31,7 +30,7 @@ export default function QuestionSug() {
           {smileys
             .filter((smiley) => smiley.type.includes("dateRelease"))
             .map((smiley) => (
-              <button type="button" className="Img" onClick={handleChoiceLinks}>
+              <button type="button" onClick={handleChoiceLinks} className="Img">
                 <img src={smiley.picture} alt={smiley.alt} />
               </button>
             ))}
@@ -41,7 +40,7 @@ export default function QuestionSug() {
           {smileys
             .filter((smiley) => smiley.type.includes("runtime"))
             .map((smiley) => (
-              <button type="button" className="Img" onClick={handleChoiceLinks}>
+              <button type="button" onClick={handleChoiceLinks} className="Img">
                 <img src={smiley.picture} alt={smiley.alt} />
               </button>
             ))}
