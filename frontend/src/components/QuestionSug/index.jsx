@@ -1,13 +1,17 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import SQuestionSug from "./style";
 import smileys from "../../assets/datasuggest";
 
 export default function QuestionSug() {
-  const [choiceLinks, setChoiceLinks] = useState(false);
-  const handleChoiceLinks = (evt) => {
+  const [choiceLinks, setChoiceLinks] = useState(true);
+  const [querySent, setQuerySent] = useState("");
+  const handleChoiceLinks = (evt, sq) => {
+    evt.target.classList.toggle("selected");
+
     setChoiceLinks(!choiceLinks);
-    if (choiceLinks) {
-      evt.target.classList.add("selected");
+    if (choiceLinks === true) {
+      setQuerySent(`${querySent}${sq}`); // adding smiley.query at the end of the query
     }
   };
   return (
@@ -20,7 +24,14 @@ export default function QuestionSug() {
           {smileys
             .filter((smiley) => smiley.type.includes("vibe"))
             .map((smiley) => (
-              <button type="button" onClick={handleChoiceLinks} className="Img">
+              <button
+                key={smiley.key}
+                type="button"
+                onClick={(event) => {
+                  handleChoiceLinks(event, smiley.query);
+                }}
+                className="Img"
+              >
                 <img src={smiley.picture} alt={smiley.alt} />
               </button>
             ))}
@@ -30,7 +41,14 @@ export default function QuestionSug() {
           {smileys
             .filter((smiley) => smiley.type.includes("dateRelease"))
             .map((smiley) => (
-              <button type="button" onClick={handleChoiceLinks} className="Img">
+              <button
+                key={smiley.key}
+                type="button"
+                onClick={(event) => {
+                  handleChoiceLinks(event, smiley.query);
+                }}
+                className="Img"
+              >
                 <img src={smiley.picture} alt={smiley.alt} />
               </button>
             ))}
@@ -40,16 +58,25 @@ export default function QuestionSug() {
           {smileys
             .filter((smiley) => smiley.type.includes("runtime"))
             .map((smiley) => (
-              <button type="button" onClick={handleChoiceLinks} className="Img">
+              <button
+                key={smiley.key}
+                type="button"
+                onClick={(event) => {
+                  handleChoiceLinks(event, smiley.query);
+                }}
+                className="Img"
+              >
                 <img src={smiley.picture} alt={smiley.alt} />
               </button>
             ))}
         </section>
       </div>
       <div className="buttonResults">
-        <button type="button" className="button">
-          Show your result
-        </button>
+        <Link to={`/suggestion/results?${querySent}`}>
+          <button type="button" className="button">
+            Show your result
+          </button>
+        </Link>
       </div>
     </SQuestionSug>
   );

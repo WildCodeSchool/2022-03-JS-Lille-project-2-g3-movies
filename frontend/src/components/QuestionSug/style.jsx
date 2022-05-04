@@ -41,5 +41,6 @@ export default styled.div`
   }
   .selected {
     border: 5px solid var(--color-button);
+    opacity: 50%;
   }
 `;
