@@ -4,15 +4,22 @@ import SQuestionSug from "./style";
 import smileys from "../../assets/datasuggest";
 
 export default function QuestionSug() {
-  const [choiceLinks, setChoiceLinks] = useState(true);
   const [querySent, setQuerySent] = useState("");
+  const [selectedButton] = useState({
+    sad: false,
+    happy: false,
+    thinking: false,
+    angry: false,
+    old: false,
+    young: false,
+    baby: false,
+    lowEnergy: false,
+    energy: false,
+  });
   const handleChoiceLinks = (evt, sq) => {
     evt.target.classList.toggle("selected");
 
-    setChoiceLinks(!choiceLinks);
-    if (choiceLinks === true) {
-      setQuerySent(`${querySent}${sq}`); // adding smiley.query at the end of the query
-    }
+    setQuerySent(`${querySent}${sq}`); // adding smiley.query at the end of the query
   };
   return (
     <SQuestionSug>
@@ -30,9 +37,14 @@ export default function QuestionSug() {
                 onClick={(event) => {
                   handleChoiceLinks(event, smiley.query);
                 }}
-                className="Img"
               >
-                <img src={smiley.picture} alt={smiley.alt} />
+                <img
+                  src={smiley.picture}
+                  alt={smiley.alt}
+                  className={`Img ${
+                    selectedButton[smiley.key] ? "selected" : ""
+                  } `}
+                />
               </button>
             ))}
         </section>
@@ -45,11 +57,21 @@ export default function QuestionSug() {
                 key={smiley.key}
                 type="button"
                 onClick={(event) => {
-                  handleChoiceLinks(event, smiley.query);
+                  handleChoiceLinks(
+                    event,
+
+                    smiley.query
+                  );
                 }}
                 className="Img"
               >
-                <img src={smiley.picture} alt={smiley.alt} />
+                <img
+                  src={smiley.picture}
+                  alt={smiley.alt}
+                  className={`Img ${
+                    selectedButton[smiley.key] ? "selected" : ""
+                  } `}
+                />
               </button>
             ))}
         </section>
@@ -66,7 +88,13 @@ export default function QuestionSug() {
                 }}
                 className="Img"
               >
-                <img src={smiley.picture} alt={smiley.alt} />
+                <img
+                  src={smiley.picture}
+                  alt={smiley.alt}
+                  className={`Img ${
+                    selectedButton[smiley.key] ? "selected" : ""
+                  } `}
+                />
               </button>
             ))}
         </section>
