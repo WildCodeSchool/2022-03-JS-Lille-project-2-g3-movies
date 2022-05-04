@@ -39,4 +39,7 @@ export default styled.div`
   div {
     border-radius: initial;
   }
+  .selected {
+    border: 5px solid var(--color-button);
+  }
 `;
