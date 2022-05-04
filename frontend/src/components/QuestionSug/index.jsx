@@ -4,23 +4,21 @@ import SQuestionSug from "./style";
 import smileys from "../../assets/datasuggest";
 
 export default function QuestionSug() {
-  const [querySent, setQuerySent] = useState("");
-  const [selectedButton] = useState({
-    sad: false,
-    happy: false,
-    thinking: false,
-    angry: false,
-    old: false,
-    young: false,
-    baby: false,
-    lowEnergy: false,
-    energy: false,
+  const [querySent] = useState("");
+  const [formData, setFormData] = useState({
+    selectedInput: true,
+    key: "",
   });
-  const handleChoiceLinks = (evt, sq) => {
-    evt.target.classList.toggle("selected");
 
-    setQuerySent(`${querySent}${sq}`); // adding smiley.query at the end of the query
+  const handleChoiceLinks = (evt) => {
+    evt.target.classList.toggle("selected");
+    const key = evt.target.name;
+    const { value } = evt.target;
+    setFormData({ ...formData, [key]: value });
   };
+
+  const sendQuery = () => {};
+
   return (
     <SQuestionSug>
       <div>
@@ -31,21 +29,16 @@ export default function QuestionSug() {
           {smileys
             .filter((smiley) => smiley.type.includes("vibe"))
             .map((smiley) => (
-              <button
-                key={smiley.key}
-                type="button"
+              <input
+                name={smiley.key}
+                type="image"
+                src={smiley.picture}
+                alt={smiley.alt}
                 onClick={(event) => {
-                  handleChoiceLinks(event, smiley.query);
+                  handleChoiceLinks(event);
                 }}
-              >
-                <img
-                  src={smiley.picture}
-                  alt={smiley.alt}
-                  className={`Img ${
-                    selectedButton[smiley.key] ? "selected" : ""
-                  } `}
-                />
-              </button>
+                checked={formData.selectedInput}
+              />
             ))}
         </section>
         <h3> What is your movie style ?</h3>
@@ -53,26 +46,16 @@ export default function QuestionSug() {
           {smileys
             .filter((smiley) => smiley.type.includes("dateRelease"))
             .map((smiley) => (
-              <button
-                key={smiley.key}
-                type="button"
+              <input
+                name={smiley.key}
+                type="image"
+                src={smiley.picture}
+                alt={smiley.alt}
                 onClick={(event) => {
-                  handleChoiceLinks(
-                    event,
-
-                    smiley.query
-                  );
+                  handleChoiceLinks(event);
                 }}
-                className="Img"
-              >
-                <img
-                  src={smiley.picture}
-                  alt={smiley.alt}
-                  className={`Img ${
-                    selectedButton[smiley.key] ? "selected" : ""
-                  } `}
-                />
-              </button>
+                checked={formData.selectedInput}
+              />
             ))}
         </section>
         <h3> What is your condition ?</h3>
@@ -80,28 +63,22 @@ export default function QuestionSug() {
           {smileys
             .filter((smiley) => smiley.type.includes("runtime"))
             .map((smiley) => (
-              <button
-                key={smiley.key}
-                type="button"
+              <input
+                name={smiley.key}
+                type="image"
+                src={smiley.picture}
+                alt={smiley.alt}
                 onClick={(event) => {
-                  handleChoiceLinks(event, smiley.query);
+                  handleChoiceLinks(event);
                 }}
-                className="Img"
-              >
-                <img
-                  src={smiley.picture}
-                  alt={smiley.alt}
-                  className={`Img ${
-                    selectedButton[smiley.key] ? "selected" : ""
-                  } `}
-                />
-              </button>
+                checked={formData.selectedInput}
+              />
             ))}
         </section>
       </div>
       <div className="buttonResults">
         <Link to={`/suggestion/results?${querySent}`}>
-          <button type="button" className="button">
+          <button type="button" className="button" onClick={sendQuery}>
             Show your result
           </button>
         </Link>

@@ -11,7 +11,7 @@ export default styled.div`
     text-align: center;
     padding-top: 1rem;
   }
-  Img {
+  input {
     width: 20vh;
     height: auto;
   }
