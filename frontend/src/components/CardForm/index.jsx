@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import propTypes from "prop-types";
-import { useState } from "react/cjs/react.development";
 import SCardForm from "./style";
 
 function CardForm({ movie }) {
