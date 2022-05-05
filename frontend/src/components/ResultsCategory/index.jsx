@@ -12,11 +12,12 @@ export default function ResultsCategory() {
   const request = (cat) => {
     return genres.find((genre) => genre.key === cat).request;
   };
+  const [count, setCount] = useState(1);
 
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/discover/movie?api_key=923a42c07dc9afdc9a05b46fb2fd558b&${request(
+        `https://api.themoviedb.org/3/discover/movie?api_key=923a42c07dc9afdc9a05b46fb2fd558b&page=${count}&${request(
           category
         )}`
       )
@@ -27,7 +28,7 @@ export default function ResultsCategory() {
         }));
         setMoviesData(newResults);
       });
-  }, []);
+  }, [count]);
 
   return (
     moviesData.length > 0 && ( // fixed autoplay malfunction
@@ -35,6 +36,24 @@ export default function ResultsCategory() {
         {moviesData.map((movie) => (
           <CardForm key={movie.id} movie={movie} />
         ))}
+        <div className="switch">
+          <button
+            type="button"
+            className="switchButton"
+            onClick={() => {
+              if (count > 1) setCount(count - 1);
+            }}
+          >
+            Preview
+          </button>
+          <button
+            type="button"
+            className="switchButton"
+            onClick={() => setCount(count + 1)}
+          >
+            Next
+          </button>
+        </div>
       </SResultsCategory>
     )
   );
