@@ -20,18 +20,30 @@ export default function FilmDetails() {
   return (
     <SFilmDetails>
       {moviesData.genres && (
-        <>
-          <p>{moviesData.title}</p>
-          <img
-            src={`https://image.tmdb.org/t/p/w500${moviesData.poster_path}`}
-            alt=""
-          />
-          <p>{moviesData.genres.map((genre) => genre.name).join(", ")}</p>
-          <p>{moviesData.overview}</p>
-          <p>Runtime : {moviesData.runtime} min</p>
-          <p>Average : {moviesData.vote_average} / 10</p>
-          <p>Release date : {moviesData.release_date}</p>
-        </>
+        <section
+          className="banner"
+          style={{
+            backgroundImage: `url(https://image.tmdb.org/t/p/original${moviesData.backdrop_path})`,
+          }}
+        >
+          <div className="info">
+            <img
+              src={`https://image.tmdb.org/t/p/w300${moviesData.poster_path}`}
+              alt=""
+            />
+            <div className="infotxt">
+              <h1>{moviesData.title}</h1>
+              <h3>{moviesData.genres.map((genre) => genre.name).join(", ")}</h3>
+              <h2>Synopsis</h2>
+              <p>{moviesData.overview}</p>
+            </div>
+          </div>
+          <div className="infosupp">
+            <p>Average : {moviesData.vote_average} / 10</p>
+            <p>Runtime : {moviesData.runtime} min</p>
+            <p>Release date : {moviesData.release_date}</p>
+          </div>
+        </section>
       )}
     </SFilmDetails>
   );
