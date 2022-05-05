@@ -31,7 +31,6 @@ export default styled.section`
   }
   h2 {
     text-decoration: underline;
-
     margin: 2rem;
   }
   .synopsis {
@@ -49,5 +48,28 @@ export default styled.section`
   .infosupp {
     margin-top: 2rem;
     margin-left: 15vw;
+  }
+  @media screen and (max-width: 767px) {
+    .banner {
+      display: flex;
+      align-items: center;
+    }
+    .info {
+      display: block;
+    }
+    img {
+    }
+    .infotxt {
+      margin-top: 0vh;
+    }
+    h3 {
+      font-weight: 700;
+    }
+    h1,
+    h2,
+    h3,
+    p {
+      text-align: center;
+    }
   }
 `;
