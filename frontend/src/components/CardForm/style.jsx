@@ -14,15 +14,22 @@ export default styled.section`
       width: 100%;
     }
   }
+
   .btn {
     background-color: transparent;
     position: absolute;
     top: 4%;
     right: 6%;
+    border: none;
+  }
+  .favorite {
+    width: 2rem;
+    color: aliceblue;
   }
   #emptyHearth {
     color: red;
   }
   #fullHearth {
+    color: red;
   }
 `;

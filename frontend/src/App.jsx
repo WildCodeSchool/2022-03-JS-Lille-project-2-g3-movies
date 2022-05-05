@@ -1,12 +1,13 @@
 import { Routes, Route } from "react-router-dom";
+import UserList from "./components/UserList";
 import ResultsWeekly from "./components/ResultsWeekly";
-import SearchPage from "./pages/SearchPage";
 import ResultsCategory from "./components/ResultsCategory";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Suggestion from "./pages/Suggestion";
 import SGlobal from "./style";
+import Form from "./components/Form";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Route path="/suggestion" element={<Suggestion />} />
         <Route path="/results/:category" element={<ResultsCategory />} />
         <Route path="/weeklyupcoming" element={<ResultsWeekly />} />
-        <Route path="/searchresult" element={<SearchPage />} />
+        <Route path="/searchresult" element={<Form />} />
+        <Route path="/userlist" element={<UserList />} />
       </Routes>
       <Footer />
     </SGlobal>

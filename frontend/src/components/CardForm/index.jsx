@@ -1,81 +1,9 @@
 import React from "react";
 import propTypes from "prop-types";
+import { useState } from "react/cjs/react.development";
 import SCardForm from "./style";
 
 function CardForm({ movie }) {
-  // const dateFormater = (date) => {
-  //   const [yy, mm, dd] = date.split("-");
-  //   return [dd, mm, yy].join("/");
-  // };
-
-  // const genreFinder = () => {
-  //   const genreArray = [];
-  //   for (let i = 0; i < movie.genre_ids.length; i++) {
-  //     switch (movie.genre_ids[i]) {
-  //       case 28:
-  //         genreArray.push(`Action`);
-  //         break;
-  //       case 12:
-  //         genreArray.push(`Aventure`);
-  //         break;
-  //       case 16:
-  //         genreArray.push(`Animation`);
-  //         break;
-  //       case 35:
-  //         genreArray.push(`Comédie`);
-  //         break;
-  //       case 80:
-  //         genreArray.push(`Policier`);
-  //         break;
-  //       case 99:
-  //         genreArray.push(`Documentaire`);
-  //         break;
-  //       case 18:
-  //         genreArray.push(`Drame`);
-  //         break;
-  //       case 10751:
-  //         genreArray.push(`Famille`);
-  //         break;
-  //       case 14:
-  //         genreArray.push(`Fantasy`);
-  //         break;
-  //       case 36:
-  //         genreArray.push(`Histoire`);
-  //         break;
-  //       case 27:
-  //         genreArray.push(`Horreur`);
-  //         break;
-  //       case 10402:
-  //         genreArray.push(`Musique`);
-  //         break;
-  //       case 9648:
-  //         genreArray.push(`Mystère`);
-  //         break;
-  //       case 10749:
-  //         genreArray.push(`Romance`);
-  //         break;
-  //       case 878:
-  //         genreArray.push(`Science-fiction`);
-  //         break;
-  //       case 10770:
-  //         genreArray.push(`Téléfilm`);
-  //         break;
-  //       case 53:
-  //         genreArray.push(`Thriller`);
-  //         break;
-  //       case 10752:
-  //         genreArray.push(`Guerre`);
-  //         break;
-  //       case 37:
-  //         genreArray.push(`Western`);
-  //         break;
-  //       default:
-  //         break;
-  //     }
-  //   }
-  //   return genreArray.map((genre) => <li key={genre}>{genre}</li>);
-  // };
-
   const addStorage = () => {
     const storedData = window.localStorage.movies
       ? window.localStorage.movies.split(",")
@@ -83,16 +11,22 @@ function CardForm({ movie }) {
 
     if (!storedData.includes(movie.id.toString())) {
       storedData.push(movie.id);
-      window.localStorage.movies = storedData;
+      localStorage.setItem("movies", storedData);
     }
   };
 
   const deleteStorage = () => {
     const storedData = window.localStorage.movies.split(",");
+    const newData = storedData
+      .filter((id) => Number(id) !== movie.id)
+      .join(",");
 
-    const newData = storedData.filter((id) => id !== movie.id);
+    localStorage.setItem("movies", newData);
+  };
 
-    window.localStorage.movies = newData;
+  const [isActive, setIsActive] = useState(false);
+  const handleIsActive = () => {
+    setIsActive(!isActive);
   };
 
   return (
@@ -106,42 +40,24 @@ function CardForm({ movie }) {
           }
           alt="affiche film"
         />
-        {/* <h2>{movie.title}</h2>
-        {movie.release_date ? (
-          <h5>Sorti le : {dateFormater(movie.release_date)}</h5>
-        ) : (
-          ""
-        )}
-        <h4>
-          {movie.vote_average}/10 <span>⭐</span>
-        </h4>
-
-        <ul>
-          {movie.genre_ids
-            ? genreFinder()
-            : movie.genres.map((genre, index) => (
-                <li key={index}>{genre.name}</li>
-              ))}
-        </ul>
-        {movie.overview ? <h3>Synopsis</h3> : ""}
-        <p>{movie.overview}</p> */}
-
-        {movie.genre_ids ? (
-          <button type="button" className="btn" onClick={() => addStorage()}>
-            <span id="emptyHearth"> ♡ </span>
-          </button>
-        ) : (
-          <button
-            type="button"
-            className="btn"
-            onClick={() => {
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            if (isActive === false) {
+              addStorage();
+            } else {
               deleteStorage();
-              window.location.reload();
-            }}
-          >
-            <span id="fullHearth">♥ </span>
-          </button>
-        )}
+            }
+            handleIsActive();
+          }}
+        >
+          <img
+            className="favorite"
+            src={isActive ? "src/assets/love.png" : "src/assets/liket.png"}
+            alt=""
+          />
+        </button>
       </div>
     </SCardForm>
   );
@@ -151,6 +67,5 @@ CardForm.propTypes = {
   movie: propTypes.string.isRequired,
   id: propTypes.number.isRequired,
   poster_path: propTypes.string.isRequired,
-  genre_ids: propTypes.string.isRequired,
 };
 export default CardForm;
