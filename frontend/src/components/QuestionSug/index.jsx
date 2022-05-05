@@ -4,6 +4,7 @@ import SQuestionSug from "./style";
 import smileys from "../../assets/datasuggest";
 
 export default function QuestionSug() {
+  const [active, setActive] = useState(true);
   const [querySent, setQuerySent] = useState("");
   const [formData, setFormData] = useState({
     sad: false,
@@ -32,8 +33,8 @@ export default function QuestionSug() {
       return subQuery;
     });
     const query = subQueries.join("&");
-    setQuerySent(`/suggestion/results?${query}`);
-    return querySent;
+    setQuerySent(query);
+    setActive(!active);
   };
 
   return (
@@ -91,8 +92,19 @@ export default function QuestionSug() {
         </section>
       </div>
       <div className="buttonResults">
-        <Link to={makeQuestSubmit}>
-          <button type="button" className="button">
+        <button
+          type="button"
+          className={`button ${active ? "" : "ok-off"} `}
+          onClick={makeQuestSubmit}
+        >
+          Are you ok?
+        </button>
+
+        <Link to={`/suggestion/results?${querySent}`}>
+          <button
+            type="button"
+            className={`button ${active ? "link-off" : ""} `}
+          >
             Show your result
           </button>
         </Link>

@@ -43,4 +43,11 @@ export default styled.div`
     border: 5px solid var(--color-button);
     opacity: 50%;
   }
+  .link-off {
+    display: none;
+  }
+  .ok-off {
+    opacity: 20%;
+    display: block;
+  }
 `;
