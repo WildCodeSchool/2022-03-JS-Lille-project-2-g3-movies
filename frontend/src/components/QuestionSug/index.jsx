@@ -4,17 +4,36 @@ import SQuestionSug from "./style";
 import smileys from "../../assets/datasuggest";
 
 export default function QuestionSug() {
-  const [querySent] = useState("");
+  const [querySent, setQuerySent] = useState("");
   const [formData, setFormData] = useState({
-    selectedInput: true,
-    key: "",
+    sad: false,
+    happy: false,
+    thinking: false,
+    angry: false,
+    old: false,
+    young: false,
+    baby: false,
+    lowEnergy: false,
+    energy: false,
   });
 
   const handleChoiceLinks = (evt) => {
     evt.target.classList.toggle("selected");
     const key = evt.target.name;
-    const { value } = evt.target;
-    setFormData({ ...formData, [key]: value });
+    setFormData({ ...formData, [key]: !formData[key] });
+  };
+
+  const makeQuestSubmit = () => {
+    const allTags = Object.keys(formData); // object.keys gets all keys of an object and puts it into an array
+    const validTags = allTags.filter((keyForm) => formData[keyForm] === true);
+    const subQueries = validTags.map((tag) => {
+      const smiley = smileys.find((smi) => smi.key === tag);
+      const subQuery = smiley.query;
+      return subQuery;
+    });
+    const query = subQueries.join("&");
+    setQuerySent(`/suggestion/results?${query}`);
+    return querySent;
   };
 
   return (
@@ -35,7 +54,6 @@ export default function QuestionSug() {
                 onClick={(event) => {
                   handleChoiceLinks(event);
                 }}
-                checked={formData.selectedInput}
               />
             ))}
         </section>
@@ -52,7 +70,6 @@ export default function QuestionSug() {
                 onClick={(event) => {
                   handleChoiceLinks(event);
                 }}
-                checked={formData.selectedInput}
               />
             ))}
         </section>
@@ -69,13 +86,12 @@ export default function QuestionSug() {
                 onClick={(event) => {
                   handleChoiceLinks(event);
                 }}
-                checked={formData.selectedInput}
               />
             ))}
         </section>
       </div>
       <div className="buttonResults">
-        <Link to={`/suggestion/results?${querySent}`}>
+        <Link to={makeQuestSubmit}>
           <button type="button" className="button">
             Show your result
           </button>
