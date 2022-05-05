@@ -28,14 +28,17 @@ export default function FilmDetails() {
         >
           <div className="info">
             <img
+              className="img"
               src={`https://image.tmdb.org/t/p/w300${moviesData.poster_path}`}
               alt=""
             />
             <div className="infotxt">
               <h1>{moviesData.title}</h1>
-              <h3>{moviesData.genres.map((genre) => genre.name).join(", ")}</h3>
-              <h2>Synopsis</h2>
-              <p>{moviesData.overview}</p>
+              <h3>
+                {moviesData.genres.map((genre) => genre.name).join(" , ")}
+              </h3>
+              <h2 className="synopsis">Synopsis</h2>
+              <p className="synopsis">{moviesData.overview}</p>
             </div>
           </div>
           <div className="infosupp">
