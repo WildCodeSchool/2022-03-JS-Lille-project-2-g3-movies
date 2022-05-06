@@ -130,6 +130,36 @@ export default styled.header`
   .showNav .slideInDown-2 {
     transition: all 1.1s ease-out;
   }
+
+  .topnav .search-container {
+    float: right;
+  }
+
+  .topnav input[type="text"] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+
+  .topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+
+  #searchLogo {
+    height: 15px;
+  }
   @media screen and (max-width: 767px) {
     .searchBar {
       display: none;

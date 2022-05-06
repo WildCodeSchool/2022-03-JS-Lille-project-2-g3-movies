@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import CardForm from "../CardForm";
 import SResultsWeekly from "./style";
-import Card from "../Card";
 
 export default function ResultsWeekly() {
   const [moviesData, setMoviesData] = useState([]);
@@ -23,7 +23,7 @@ export default function ResultsWeekly() {
     moviesData.length > 0 && ( // fixed autoplay malfunction
       <SResultsWeekly>
         {moviesData.map((movie) => (
-          <Card key={movie.id} data={movie} />
+          <CardForm key={movie.id} data={movie} />
         ))}
       </SResultsWeekly>
     )
