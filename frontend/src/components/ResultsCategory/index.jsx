@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import SResultsCategory from "./style";
 import Card from "../Card";
@@ -34,7 +34,9 @@ export default function ResultsCategory() {
     moviesData.length > 0 && ( // fixed autoplay malfunction
       <SResultsCategory>
         {moviesData.map((movie) => (
-          <Card key={movie.id} data={movie} />
+          <Link to={`/detail/${movie.id}`}>
+            <Card key={movie.id} data={movie} />
+          </Link>
         ))}
         <div className="switch">
           <button
