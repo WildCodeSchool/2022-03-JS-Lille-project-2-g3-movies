@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export default styled.footer`
+  .adressText {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+  }
   background-color: var(--color-bg-primaire);
   color: var(--color-font-primaire);
   -webkit-box-shadow: 13px 0px 28px 8px var(--color-grey);
