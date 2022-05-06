@@ -20,9 +20,10 @@ export default styled.section`
   }
   span {
     margin: 1rem;
-    border: 5px solid;
+    border: 3px solid;
     border-radius: 1rem;
-    background: #f8f8ff;
+    background: black;
+    padding: 5px;
   }
   img {
     border-radius: 20px;
@@ -44,7 +45,7 @@ export default styled.section`
     text-align: center;
   }
   h3 {
-    font-weight: 800;
+    font-weight: 200;
   }
   p {
     color: #fff;
