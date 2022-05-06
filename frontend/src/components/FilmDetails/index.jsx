@@ -24,7 +24,7 @@ export default function FilmDetails() {
           <p>{moviesData.title}</p>
           <img
             src={`https://image.tmdb.org/t/p/w500${moviesData.poster_path}`}
-            alt=""
+            alt="poster of the film"
           />
           <p>{moviesData.genres.map((genre) => genre.name).join(", ")}</p>
           <p>{moviesData.overview}</p>
