@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 import CardForm from "../CardForm";
 import SForm from "./style";
 
@@ -8,10 +9,12 @@ function Form() {
   const [search, setSearch] = useState("titanic");
   const [sortGoodBad, setSortGoodBad] = useState(null);
 
+  const { textEntered } = useParams();
+
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/search/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&query=${search}&language=fr-FR`
+        `https://api.themoviedb.org/3/search/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&query=${textEntered}&language=fr-FR`
       )
       .then((res) => setMoviesData(res.data.results));
   }, [search]);

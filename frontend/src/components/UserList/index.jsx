@@ -10,8 +10,7 @@ export default function UserList() {
     const movieId = window.localStorage.movies
       ? window.localStorage.movies.split(",")
       : [];
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < movieId.length; i++) {
+    for (let i = 0; i < movieId.length; i + 1) {
       axios
         .get(
           `https://api.themoviedb.org/3/movie/${movieId[i]}?api_key=ed82f4c18f2964e75117c2dc65e2161d&language=fr-FR`

@@ -21,6 +21,11 @@ export default function Header() {
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
+  const [textEntered, setTextEntered] = useState("");
+
+  const handleChange = (e) => {
+    setTextEntered(e.target.value);
+  };
 
   return (
     <SHeader>
@@ -29,7 +34,23 @@ export default function Header() {
           y === 0 ? "navBar" : "navBarSolid"
         }`}
       >
-        <p>Searchbar</p>
+        <form>
+          <input
+            type="text"
+            placeholder="Search.."
+            name="search"
+            onChange={handleChange}
+          />
+          <Link to={`/searchresult/${textEntered}`}>
+            <button type="submit">
+              <img
+                src="src/assets/searchLogo.png"
+                alt="searchLogo"
+                id="searchLogo"
+              />
+            </button>
+          </Link>
+        </form>
         <Link to="/">
           <img
             className="navBarLogo"

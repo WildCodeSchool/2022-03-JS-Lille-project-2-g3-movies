@@ -18,7 +18,7 @@ function App() {
         <Route path="/suggestion" element={<Suggestion />} />
         <Route path="/results/:category" element={<ResultsCategory />} />
         <Route path="/weeklyupcoming" element={<ResultsWeekly />} />
-        <Route path="/searchresult" element={<Form />} />
+        <Route path="/searchresult/:textEntered" element={<Form />} />
         <Route path="/userlist" element={<UserList />} />
       </Routes>
       <Footer />
