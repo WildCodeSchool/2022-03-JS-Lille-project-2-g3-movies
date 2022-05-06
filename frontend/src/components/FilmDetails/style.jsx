@@ -16,7 +16,13 @@ export default styled.section`
   }
   .infotxt {
     margin-left: 2rem;
-    margin-top: 70vh;
+    margin-top: 62vh;
+  }
+  span {
+    margin: 1rem;
+    border: 5px solid;
+    border-radius: 1rem;
+    background: #f8f8ff;
   }
   img {
     border-radius: 20px;
@@ -26,6 +32,7 @@ export default styled.section`
     -moz-box-shadow: -10px 2px 94px -4px rgba(255, 255, 255, 0.82);
   }
   h1 {
+    margin-bottom: 2rem;
     text-align: start;
     color: #f8f8ff;
   }
@@ -38,7 +45,6 @@ export default styled.section`
   }
   h3 {
     font-weight: 800;
-    text-decoration: underline;
   }
   p {
     color: #fff;

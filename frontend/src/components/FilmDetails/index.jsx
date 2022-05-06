@@ -35,7 +35,9 @@ export default function FilmDetails() {
             <div className="infotxt">
               <h1>{moviesData.title}</h1>
               <h3>
-                {moviesData.genres.map((genre) => genre.name).join(" , ")}
+                {moviesData.genres.map((genre) => (
+                  <span>{genre.name}</span>
+                ))}
               </h3>
               <h2 className="synopsis">Synopsis</h2>
               <p className="synopsis">{moviesData.overview}</p>
