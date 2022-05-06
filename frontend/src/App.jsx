@@ -18,7 +18,6 @@ function App() {
         <Route path="/results/:category" element={<ResultsCategory />} />
         <Route path="/suggestion/results" element={<SugResult />} />
         <Route path="/weeklyupcoming" element={<ResultsWeekly />} />
-
       </Routes>
       <Footer />
     </SGlobal>
