@@ -6,7 +6,6 @@ import SForm from "./style";
 
 function Form() {
   const [moviesData, setMoviesData] = useState([]);
-  const [search, setSearch] = useState("titanic");
   const [sortGoodBad, setSortGoodBad] = useState(null);
 
   const { textEntered } = useParams();
@@ -17,22 +16,12 @@ function Form() {
         `https://api.themoviedb.org/3/search/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&query=${textEntered}&language=fr-FR`
       )
       .then((res) => setMoviesData(res.data.results));
-  }, [search]);
+  }, [textEntered]);
 
   return (
     <SForm>
       <div className="form-component">
         <div className="form-container">
-          <form>
-            <input
-              type="text"
-              placeholder="Entrez le titre d'un film"
-              id="search-input"
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <input type="submit" value="Rechercher" />
-          </form>
-
           <div className="btn-sort-container">
             <button
               type="button"

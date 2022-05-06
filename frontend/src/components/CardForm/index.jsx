@@ -53,7 +53,11 @@ function CardForm({ movie }) {
         >
           <img
             className="favorite"
-            src={isActive ? "src/assets/love.png" : "src/assets/liket.png"}
+            src={
+              isActive
+                ? "src/assets/fullyHearth.jpg"
+                : "src/assets/emptyHearth.jpg"
+            }
             alt=""
           />
         </button>
