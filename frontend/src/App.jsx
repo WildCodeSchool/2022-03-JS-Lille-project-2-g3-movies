@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import SugResult from "@components/SugResult";
 import ResultsWeekly from "@components/ResultsWeekly";
+import FilmDetails from "@components/FilmDetails";
 import ResultsCategory from "./components/ResultsCategory";
 import Home from "./pages/Home";
 import Header from "./components/Header";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/results/:category" element={<ResultsCategory />} />
         <Route path="/suggestion/results" element={<SugResult />} />
         <Route path="/weeklyupcoming" element={<ResultsWeekly />} />
+        <Route path="/detail/:id" element={<FilmDetails />} />
       </Routes>
       <Footer />
     </SGlobal>
