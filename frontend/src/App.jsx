@@ -1,4 +1,6 @@
 import { Routes, Route } from "react-router-dom";
+import SugResult from "./components/SugResult";
+import FilmDetails from "./components/FilmDetails";
 import UserList from "./components/UserList";
 import ResultsWeekly from "./components/ResultsWeekly";
 import ResultsCategory from "./components/ResultsCategory";
@@ -17,9 +19,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/suggestion" element={<Suggestion />} />
         <Route path="/results/:category" element={<ResultsCategory />} />
+        <Route path="/suggestion/results" element={<SugResult />} />
         <Route path="/weeklyupcoming" element={<ResultsWeekly />} />
         <Route path="/searchresult/:textEntered" element={<Form />} />
         <Route path="/userlist" element={<UserList />} />
+        <Route path="/detail/:id" element={<FilmDetails />} />
       </Routes>
       <Footer />
     </SGlobal>
