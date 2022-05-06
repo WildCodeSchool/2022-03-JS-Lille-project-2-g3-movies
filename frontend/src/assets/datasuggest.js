@@ -56,7 +56,7 @@ export default [
     type: "dateRelease",
     picture: imgBaby,
     alt: "baby",
-    query: "release_date.gte=2010-01-01&release_date=2010-01-01",
+    query: "release_date.gte=2010-01-01",
   },
   {
     key: "lowEnergy",

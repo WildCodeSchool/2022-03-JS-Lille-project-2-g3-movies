@@ -25,7 +25,7 @@ export default function QuestionSug() {
   };
 
   const makeQuestSubmit = () => {
-    const allTags = Object.keys(formData); // object.keys gets all keys of an object and puts it into an array
+    const allTags = Object.keys(formData); // Object.keys() gets all keys of an object and puts it into an array
     const validTags = allTags.filter((keyForm) => formData[keyForm] === true);
     const subQueries = validTags.map((tag) => {
       const smiley = smileys.find((smi) => smi.key === tag);
