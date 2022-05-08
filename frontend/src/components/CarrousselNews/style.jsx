@@ -5,7 +5,7 @@ export default styled.section`
 
   .carousel {
     height: 87vh;
-    background-position: center;
+    width: 100vw;
   }
   @media screen and (max-width: 767px) {
     .carousel {
