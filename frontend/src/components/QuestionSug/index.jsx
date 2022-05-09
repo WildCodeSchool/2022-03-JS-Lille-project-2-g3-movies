@@ -1,12 +1,42 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import SQuestionSug from "./style";
 import smileys from "../../assets/datasuggest";
 
 export default function QuestionSug() {
-  const [choiceLinks, setChoiceLinks] = useState(false);
-  const handleChoiceLinks = () => {
-    setChoiceLinks(!choiceLinks);
+  const [active, setActive] = useState(true);
+  const [querySent, setQuerySent] = useState("");
+  const [formData, setFormData] = useState({
+    sad: false,
+    happy: false,
+    thinking: false,
+    angry: false,
+    old: false,
+    young: false,
+    baby: false,
+    lowEnergy: false,
+    energy: false,
+  });
+
+  const handleChoiceLinks = (evt) => {
+    evt.target.classList.toggle("selected");
+    const key = evt.target.name;
+    setFormData({ ...formData, [key]: !formData[key] });
   };
+
+  const makeQuestSubmit = () => {
+    const allTags = Object.keys(formData); // Object.keys() gets all keys of an object and puts it into an array
+    const validTags = allTags.filter((keyForm) => formData[keyForm] === true);
+    const subQueries = validTags.map((tag) => {
+      const smiley = smileys.find((smi) => smi.key === tag);
+      const subQuery = smiley.query;
+      return subQuery;
+    });
+    const query = subQueries.join("&");
+    setQuerySent(query);
+    setActive(!active);
+  };
+
   return (
     <SQuestionSug>
       <div>
@@ -60,7 +90,7 @@ export default function QuestionSug() {
           <button type="button" className="button">
             Show your result
           </button>
-        </div>
+        </Link>
       </div>
     </SQuestionSug>
   );
