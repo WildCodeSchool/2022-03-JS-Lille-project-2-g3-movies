@@ -15,6 +15,12 @@ export default styled.div`
     width: 20vh;
     height: auto;
   }
+  Img {
+    width: 22vh;
+    height: auto;
+    margin: 0.5vw;
+    margin-top: 1vh;
+  }
   button.Img {
     display: block;
     width: auto;

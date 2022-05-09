@@ -35,7 +35,7 @@ export default function ResultsCategory() {
       <SResultsCategory>
         {moviesData.map((movie) => (
           <Link to={`/detail/${movie.id}`}>
-            <CardForm key={movie.id} data={movie} />
+            <CardForm key={movie.id} movie={movie} />
           </Link>
         ))}
         <div className="switch">
