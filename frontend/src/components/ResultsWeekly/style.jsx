@@ -31,4 +31,23 @@ export default styled.section`
   a {
     text-decoration: none;
   }
+
+  .switchButton {
+    background-color: var(--color-button);
+    border-radius: 20vw;
+    text-transform: uppercase;
+    color: var(--color-font-primaire);
+    cursor: pointer;
+    box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    width: fit-content;
+    padding: 0.5em 1.75em 0.5em;
+    margin-top: 3rem;
+    width: 8rem;
+    margin: 2rem;
+  }
+  .switch {
+    flex-basis: 75%;
+    display: flex;
+    justify-content: center;
+  }
 `;
