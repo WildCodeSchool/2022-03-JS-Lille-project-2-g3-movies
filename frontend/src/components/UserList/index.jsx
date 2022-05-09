@@ -7,15 +7,13 @@ export default function UserList() {
   const [listData, setListData] = useState([]);
 
   useEffect(() => {
-    const movieId = window.localStorage.movies
-      ? window.localStorage.movies.split(",")
-      : [];
+    const movieId = localStorage.movies ? localStorage.movies.split(",") : [];
     for (let i = 0; i < movieId.length; i + 1) {
       axios
         .get(
           `https://api.themoviedb.org/3/movie/${movieId[i]}?api_key=ed82f4c18f2964e75117c2dc65e2161d&language=fr-FR`
         )
-        .then((res) => setListData((allData) => [...allData, res.data]));
+        .then(({ data }) => setListData((allData) => [...allData, data]));
     }
   }, []);
   return (

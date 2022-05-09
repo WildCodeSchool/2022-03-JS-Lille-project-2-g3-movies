@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import propTypes from "prop-types";
 import SCardForm from "./style";
+import liket from "../../assets/liket.png";
+import love from "../../assets/love.png";
 
 function CardForm({ movie }) {
   const addStorage = () => {
@@ -51,15 +53,7 @@ function CardForm({ movie }) {
             handleIsActive();
           }}
         >
-          <img
-            className="favorite"
-            src={
-              isActive
-                ? "src/assets/fullyHearth.jpg"
-                : "src/assets/emptyHearth.jpg"
-            }
-            alt=""
-          />
+          <img className="favorite" src={isActive ? love : liket} alt="" />
         </button>
       </div>
     </SCardForm>

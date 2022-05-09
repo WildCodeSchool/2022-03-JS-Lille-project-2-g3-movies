@@ -1,8 +1,8 @@
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import CardForm from "@components/CardForm";
 import SSugResult from "./style";
+import CardForm from "../CardForm";
 
 export default function SugResult() {
   const [searchParams] = useSearchParams();

@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import SugResult from "@components/SugResult";
-import ResultsWeekly from "@components/ResultsWeekly";
-import QuestionSug from "@components/QuestionSug";
-import FilmDetails from "@components/FilmDetails";
+import SugResult from "./components/SugResult";
+import ResultsWeekly from "./components/ResultsWeekly";
+import QuestionSug from "./components/QuestionSug";
+import FilmDetails from "./components/FilmDetails";
 import UserList from "./components/UserList";
 import ResultsCategory from "./components/ResultsCategory";
 import Home from "./pages/Home";

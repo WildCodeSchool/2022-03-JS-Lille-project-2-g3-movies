@@ -56,4 +56,10 @@ export default styled.div`
     opacity: 20%;
     display: block;
   }
+  .smileyImg {
+    margin: 3rem 0;
+  }
+  .smileyImg input {
+    padding: 0 2rem;
+  }
 `;

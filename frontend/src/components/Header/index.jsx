@@ -1,22 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import SHeader from "./style";
+import cinerama from "../../assets/cinerama.png";
+import search from "../../assets/searchLogo.png";
 
 export default function Header() {
   const [showLinks, setShowLinks] = useState(false);
-  const [y, setY] = useState(window.scrollY);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setY(window.scrollY);
-    });
-
-    return () => {
-      window.removeEventListener("scroll", () => {
-        setY(window.scrollY);
-      });
-    };
-  }, []);
 
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
@@ -29,11 +18,7 @@ export default function Header() {
 
   return (
     <SHeader>
-      <nav
-        className={`navBar ${showLinks ? "showNav" : "hideNav"} ${
-          y === 0 ? "navBar" : "navBarSolid"
-        }`}
-      >
+      <nav className={`navBar ${showLinks ? "showNav" : "hideNav"}`}>
         <form>
           <input
             type="text"
@@ -43,20 +28,12 @@ export default function Header() {
           />
           <Link to={`/searchresult/${textEntered}`}>
             <button type="submit">
-              <img
-                src="src/assets/searchLogo.png"
-                alt="searchLogo"
-                id="searchLogo"
-              />
+              <img src={search} alt="searchLogo" id="searchLogo" />
             </button>
           </Link>
         </form>
         <Link to="/">
-          <img
-            className="navBarLogo"
-            src="src/assets/cinerama.png"
-            alt="logo cinerama"
-          />
+          <img className="navBarLogo" src={cinerama} alt="logo cinerama" />
         </Link>
         <ul className="navBarLinks">
           <li className="navBarItem slideInDown1">
@@ -67,6 +44,11 @@ export default function Header() {
           <li className="navBarItem slideInDown2">
             <Link to="/suggestion" className="navBarLink">
               Suggest me some movies
+            </Link>
+          </li>
+          <li className="navBarItem slideInDown2">
+            <Link to="/userlist" className="navBarLink">
+              My watch list
             </Link>
           </li>
         </ul>
