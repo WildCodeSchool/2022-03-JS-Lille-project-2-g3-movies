@@ -11,7 +11,7 @@ export default styled.div`
     text-align: center;
     padding-top: 1rem;
   }
-  Img {
+  input {
     width: 20vh;
     height: auto;
   }
@@ -38,5 +38,16 @@ export default styled.div`
   }
   div {
     border-radius: initial;
+  }
+  .selected {
+    border: 5px solid var(--color-button);
+    opacity: 50%;
+  }
+  .link-off {
+    display: none;
+  }
+  .ok-off {
+    opacity: 20%;
+    display: block;
   }
 `;
