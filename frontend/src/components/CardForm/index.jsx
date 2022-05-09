@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import propTypes from "prop-types";
+import { Link } from "react-router-dom";
 import SCardForm from "./style";
 import liket from "../../assets/liket.png";
 import love from "../../assets/love.png";
@@ -33,14 +34,17 @@ function CardForm({ movie }) {
   return (
     <SCardForm>
       <div className="card">
-        <img
-          src={
-            movie.poster_path
-              ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-              : "./img/poster.jpg"
-          }
-          alt="affiche film"
-        />
+        <Link to={`/detail/${movie.id}`}>
+          <img
+            src={
+              movie.poster_path
+                ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                : "./img/poster.jpg"
+            }
+            alt="affiche film"
+          />
+        </Link>
+
         <button
           type="button"
           className="btn"
