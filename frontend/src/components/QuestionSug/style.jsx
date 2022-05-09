@@ -11,9 +11,11 @@ export default styled.div`
     text-align: center;
     padding-top: 1rem;
   }
-  input {
-    width: 20vh;
+  Img {
+    width: 22vh;
     height: auto;
+    margin: 0.5vw;
+    margin-top: 1vh;
   }
   button.Img {
     display: block;
