@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export default styled.section`
-  margin-top: 5vh;
-  padding-top: 3vh;
-  padding-bottom: 3vh;
-  justify-content: center;
-  display: flex;
-  flex-flow: row wrap;
-
+  .list {
+    margin-top: 5vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+  }
   h2 {
+    margin-top: 1vh;
     text-align: center;
   }
   p {
