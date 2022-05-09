@@ -12,8 +12,10 @@ export default styled.div`
     padding-top: 1rem;
   }
   Img {
-    width: 20vh;
+    width: 22vh;
     height: auto;
+    margin: 0.5vw;
+    margin-top: 1vh;
   }
   button.Img {
     display: block;

@@ -13,7 +13,7 @@ export default function QuestionSug() {
         <div className={`Img ${choiceLinks ? "borderSolid" : ""} `}>
           <h1> Suggestion </h1>
           <h2> Which film do you recommend me ?</h2>
-          <h3> Whats your vibes ?</h3>
+          <h3> What is your vibes ?</h3>
           <section className="smileyImg">
             {smileys
               .filter((smiley) => smiley.type.includes("vibe"))
@@ -27,7 +27,7 @@ export default function QuestionSug() {
                 </button>
               ))}
           </section>
-          <h3> What is your movie style ?</h3>
+          <h3> How are you feeling ?</h3>
           <section className="smileyImg">
             {smileys
               .filter((smiley) => smiley.type.includes("dateRelease"))
