@@ -76,7 +76,7 @@ CardForm.propTypes = {
 CardForm.defaultProps = {
   poster_path:
     "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ucGY75ZJHrgY40ym7kXy7sRp7Vy.jpg",
-  id: 999,
+  id: 9,
 };
 
 export default CardForm;
