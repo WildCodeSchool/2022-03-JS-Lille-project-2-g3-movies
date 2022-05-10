@@ -157,8 +157,8 @@ export default styled.header`
     background: #ccc;
   }
 
-  #searchLogo {
-    height: 15px;
+  .searchLogo {
+    height: 12px;
   }
   @media screen and (max-width: 767px) {
     .searchBar {

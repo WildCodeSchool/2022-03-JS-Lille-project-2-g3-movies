@@ -50,14 +50,14 @@ export default styled.main`
       justify-content: space-around;
       cursor: pointer;
 
-      #goodToBad {
+      .goodToBad {
         border-radius: 10px 0 0 10px;
       }
-      #badToGood {
+      .badToGood {
         border-radius: 0 10px 10px 0;
       }
-      #goodToBad,
-      #badToGood {
+      .goodToBad,
+      .badToGood {
         background: $color-1;
         width: 110px;
         transition: 0.3s;
@@ -67,16 +67,16 @@ export default styled.main`
           background: $black;
         }
       }
-      #goodToBad span {
+      .goodToBad span {
         transform: translateY(-50%) rotate(-90deg);
         right: 18px;
       }
-      #badToGood span {
+      .badToGood span {
         transform: translateY(-50%) rotate(90deg);
         left: 16px;
       }
-      #goodToBad span,
-      #badToGood span {
+      .goodToBad span,
+      .badToGood span {
         position: absolute;
         top: 50%;
       }

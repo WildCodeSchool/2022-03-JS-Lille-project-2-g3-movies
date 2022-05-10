@@ -27,10 +27,4 @@ export default styled.section`
     width: 2rem;
     color: aliceblue;
   }
-  #emptyHearth {
-    color: red;
-  }
-  #fullHearth {
-    color: red;
-  }
 `;
