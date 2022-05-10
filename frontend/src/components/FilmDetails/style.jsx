@@ -60,6 +60,7 @@ export default styled.section`
     .banner {
       display: flex;
       align-items: center;
+      width: 100vw;
     }
     .info {
       display: block;
@@ -68,15 +69,29 @@ export default styled.section`
     }
     .infotxt {
       margin-top: 0vh;
+      margin-left: 0;
     }
     h3 {
       font-weight: 700;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .infosupp {
+      display: none;
+      margin-top: 0;
+      margin-left: 0;
     }
     h1,
     h2,
     h3,
     p {
       text-align: center;
+    }
+    span {
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      width: 8rem;
     }
   }
 `;
