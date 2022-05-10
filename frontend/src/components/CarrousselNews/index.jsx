@@ -33,6 +33,7 @@ function CarrousselNews() {
               key={movie.id}
               src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
               alt="poster movie"
+
             />
           ))}
         </Carousel>

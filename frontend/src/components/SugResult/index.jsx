@@ -1,8 +1,8 @@
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Card from "../Card";
 import SSugResult from "./style";
+import CardForm from "../CardForm";
 
 export default function SugResult() {
   const [searchParams] = useSearchParams();
@@ -28,7 +28,7 @@ export default function SugResult() {
       <h2>Our suggestion for you</h2>
       <div className="list">
         {moviesData.map((movie) => (
-          <Card key={movie.id} data={movie} />
+          <CardForm key={movie.id} movie={movie} />
         ))}
       </div>
       <div className="switch">

@@ -11,9 +11,15 @@ export default styled.div`
     text-align: center;
     padding-top: 1rem;
   }
-  Img {
+  input {
     width: 20vh;
     height: auto;
+  }
+  Img {
+    width: 22vh;
+    height: auto;
+    margin: 0.5vw;
+    margin-top: 1vh;
   }
   button.Img {
     display: block;
@@ -38,5 +44,22 @@ export default styled.div`
   }
   div {
     border-radius: initial;
+  }
+  .selected {
+    border: 5px solid var(--color-button);
+    opacity: 50%;
+  }
+  .link-off {
+    display: none;
+  }
+  .ok-off {
+    opacity: 20%;
+    display: block;
+  }
+  .smileyImg {
+    margin: 3rem 0;
+  }
+  .smileyImg input {
+    padding: 0 2rem;
   }
 `;
