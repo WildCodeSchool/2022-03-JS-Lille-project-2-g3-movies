@@ -33,7 +33,6 @@ export default styled.div`
     background: #f1f1f1;
     padding: 14px 28px;
     border-radius: 3px;
-    max-width: 600px;
     min-width: 300px;
     color: black;
   }
