@@ -30,7 +30,7 @@ export default function FilmDetails() {
             <img
               className="img"
               src={`https://image.tmdb.org/t/p/w300${moviesData.poster_path}`}
-              alt=""
+              alt="poster path"
             />
             <div className="infotxt">
               <h1>{moviesData.title}</h1>
