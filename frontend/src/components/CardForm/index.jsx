@@ -41,7 +41,7 @@ function CardForm({ movie }) {
                 ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
                 : "./img/poster.jpg"
             }
-            alt="affiche film"
+            alt="movie poster"
           />
         </Link>
 
@@ -57,7 +57,11 @@ function CardForm({ movie }) {
             handleIsActive();
           }}
         >
-          <img className="favorite" src={isActive ? love : liket} alt="favorite" />
+          <img
+            className="favorite"
+            src={isActive ? love : liket}
+            alt="favorite"
+          />
         </button>
       </div>
     </SCardForm>
@@ -66,7 +70,13 @@ function CardForm({ movie }) {
 
 CardForm.propTypes = {
   movie: propTypes.string.isRequired,
-  id: propTypes.number.isRequired,
-  poster_path: propTypes.string.isRequired,
+  id: propTypes.number,
+  poster_path: propTypes.string,
 };
+CardForm.defaultProps = {
+  poster_path:
+    "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ucGY75ZJHrgY40ym7kXy7sRp7Vy.jpg",
+  id: 999,
+};
+
 export default CardForm;

@@ -14,7 +14,7 @@ export default function TypeCarroussel() {
       <Swiper slidesPerView={3} spaceBetween={10} className="mySwiper">
         {genres.map((genre) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={genre.key}>
               <Link to={`/results/${genre.key}`}>
                 <img src={genre.picture} alt={genre.alt} />
               </Link>
