@@ -11,6 +11,10 @@ export default styled.div`
     text-align: center;
     padding-top: 1rem;
   }
+  input {
+    width: 20vh;
+    height: auto;
+  }
   Img {
     width: 22vh;
     height: auto;
@@ -51,5 +55,11 @@ export default styled.div`
   .ok-off {
     opacity: 20%;
     display: block;
+  }
+  .smileyImg {
+    margin: 3rem 0;
+  }
+  .smileyImg input {
+    padding: 0 2rem;
   }
 `;

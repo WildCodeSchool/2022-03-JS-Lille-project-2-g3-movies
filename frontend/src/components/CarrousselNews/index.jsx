@@ -31,8 +31,8 @@ function CarrousselNews() {
           {moviesData.map((movie) => (
             <img
               key={movie.id}
-              src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-              alt=""
+              src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+              alt="poster film"
             />
           ))}
         </Carousel>

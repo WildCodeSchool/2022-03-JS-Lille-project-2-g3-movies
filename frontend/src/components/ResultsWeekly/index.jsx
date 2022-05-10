@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import CardForm from "../CardForm";
 import SResultsWeekly from "./style";
-import Card from "../Card";
 
 export default function ResultsWeekly() {
   const [moviesData, setMoviesData] = useState([]);
@@ -24,9 +23,7 @@ export default function ResultsWeekly() {
     moviesData.length > 0 && ( // fixed autoplay malfunction
       <SResultsWeekly>
         {moviesData.map((movie) => (
-          <Link to={`/detail/${movie.id}`}>
-            <Card key={movie.id} data={movie} />
-          </Link>
+          <CardForm key={movie.id} movie={movie} />
         ))}
         <div className="switch">
           <button

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export default styled.section`
   .list {
-    margin-top: 5vh;
     padding-top: 3vh;
     padding-bottom: 3vh;
     justify-content: center;
@@ -10,7 +9,7 @@ export default styled.section`
     flex-flow: row wrap;
   }
   h2 {
-    margin-top: 1vh;
+    margin-top: 2rem;
     text-align: center;
   }
   p {
