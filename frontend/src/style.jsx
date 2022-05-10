@@ -44,7 +44,6 @@ export default styled.div`
     border: 3px dotted red;
   }
   h1 {
-    color: var(--font-color-title1);
     font-size: var(--font-size-h1);
     font-weight: var(--font-weight-title);
   }

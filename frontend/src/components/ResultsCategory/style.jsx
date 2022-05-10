@@ -38,4 +38,7 @@ export default styled.section`
     display: flex;
     justify-content: center;
   }
+  img {
+    border-radius: 10px;
+  }
 `;
