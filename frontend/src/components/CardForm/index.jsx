@@ -57,7 +57,11 @@ function CardForm({ movie }) {
             handleIsActive();
           }}
         >
-          <img className="favorite" src={isActive ? love : liket} alt="favorite" />
+          <img
+            className="favorite"
+            src={isActive ? love : liket}
+            alt="favorite"
+          />
         </button>
       </div>
     </SCardForm>
