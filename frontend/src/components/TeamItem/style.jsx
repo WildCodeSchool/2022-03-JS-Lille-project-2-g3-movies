@@ -8,6 +8,9 @@ export default styled.div`
   display: flex;
   margin: 1vw;
   text-align: center;
+  a {
+    text-decoration: none;
+  }
 
   img {
     width: 8rem;
