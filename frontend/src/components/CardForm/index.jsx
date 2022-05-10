@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import SCardForm from "./style";
 import liket from "../../assets/liket.png";
 import love from "../../assets/love.png";
+import poster from "../../assets/poster.jpg";
 
 function CardForm({ movie }) {
   const addStorage = () => {
@@ -39,9 +40,9 @@ function CardForm({ movie }) {
             src={
               movie.poster_path
                 ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-                : "./img/poster.jpg"
+                : poster
             }
-            alt="affiche film"
+            alt="poster movie"
           />
         </Link>
 
