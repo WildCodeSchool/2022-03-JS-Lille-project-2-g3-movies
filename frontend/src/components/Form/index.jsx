@@ -25,16 +25,14 @@ function Form() {
           <div className="btn-sort-container">
             <button
               type="button"
-              className="btn-sort"
-              id="goodToBad"
+              className="btn-sort goodToBad"
               onClick={() => setSortGoodBad("goodToBad")}
             >
               Top<span>➜</span>
             </button>
             <button
               type="button"
-              className="btn-sort"
-              id="badToGood"
+              className="btn-sort badToGood"
               onClick={() => setSortGoodBad("badToGood")}
             >
               Flop<span>➜</span>

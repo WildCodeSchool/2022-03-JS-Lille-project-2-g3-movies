@@ -28,7 +28,7 @@ export default function Header() {
           />
           <Link to={`/searchresult/${textEntered}`}>
             <button type="submit">
-              <img src={search} alt="searchLogo" id="searchLogo" />
+              <img src={search} alt="searchLogo" className="searchLogo" />
             </button>
           </Link>
         </form>
