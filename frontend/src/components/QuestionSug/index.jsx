@@ -48,6 +48,7 @@ export default function QuestionSug() {
             .filter((smiley) => smiley.type.includes("vibe"))
             .map((smiley) => (
               <input
+                key={smiley.key}
                 name={smiley.key}
                 type="image"
                 src={smiley.picture}
@@ -64,6 +65,7 @@ export default function QuestionSug() {
             .filter((smiley) => smiley.type.includes("dateRelease"))
             .map((smiley) => (
               <input
+                key={smiley.key}
                 name={smiley.key}
                 type="image"
                 src={smiley.picture}
@@ -80,6 +82,7 @@ export default function QuestionSug() {
             .filter((smiley) => smiley.type.includes("runtime"))
             .map((smiley) => (
               <input
+                key={smiley.key}
                 name={smiley.key}
                 type="image"
                 src={smiley.picture}
