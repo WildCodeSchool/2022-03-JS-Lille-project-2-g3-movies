@@ -6,6 +6,14 @@ export default styled.footer`
     display: flex;
     justify-content: center;
   }
+  .entry {
+    margin: 2vw;
+  }
+
+  .team {
+    display: flex;
+  }
+
   background-color: var(--color-bg-primaire);
   color: var(--color-font-primaire);
   -webkit-box-shadow: 13px 0px 28px 8px var(--color-grey);
